@@ -7,6 +7,8 @@ git clone git@github.com:HrodeDotFr/praw.git
 ```
 
 ## Documentation
+[CSS et JS](https://hrodedotfr.github.io/praw/)
+
 ### Packages npm conseillés
 | package | utilité |
 | ------ | ------ |
@@ -21,31 +23,3 @@ git clone git@github.com:HrodeDotFr/praw.git
 | express-session | Middleware de session pour Express |
 | nodemailer | Envoi d'emails |
 | ejs | Moteur de template |
-
-### CSS
-- Couleurs
-- Texte
-- Tableaux
-- Listes
-- Icones
-- Sizing
-- display
-- TODO Bordures
-- TODO Boutons
-- TODO cursors
-- TODO Formulaires
-- TODO Grille
-- TODO Margins et paddings
-- TODO Scroll
-- TODO Tabs
-- TODO Tags
-
-### JS
-- TODO Alertes
-- TODO Notifications
-- TODO Loader
-- TODO Pagine
-- TODO Autocomplete
-- TODO Modals
-- TODO Tooltips
-- TODO Uploaders
