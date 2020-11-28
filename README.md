@@ -33,10 +33,10 @@ $colors: (
 "yellow": #FBC531
 );
 
-// === Padding et margin === //
-$paddings-margins-size:1rem;
+// === Margins et paddings === //
+$margins-paddings-size:1rem;
 
-// === Grid === //
+// === Grille === //
 $container-widths: (
 "xs": 0px,
 "s": 576px,

@@ -5,7 +5,7 @@
             @each $sizeN, $sizeRatio in ("none":0, "auto":auto, "x025":0.25, "x05":0.5, "":1, "x15":1.5, "x2":2, "x25":2.5, "x3":3, "x4":4, "x5":5) {
                 $size:$sizeRatio;
                 @if $sizeRatio != "auto" {
-                    $size:#{$sizeRatio * $paddings-margins-size};
+                    $size:#{$sizeRatio * $margins-paddings-size};
                     @if $sizeRatio == 0 {
                         $size:0;
                     }
@@ -44,7 +44,7 @@
                 @each $sizeN, $sizeRatio in ("none":0, "auto":auto, "x025":0.25, "x05":0.5, "":1, "x15":1.5, "x2":2, "x25":2.5, "x3":3, "x4":4, "x5":5) {
                     $size:$sizeRatio;
                     @if $sizeRatio != "auto" {
-                        $size:#{$sizeRatio * $paddings-margins-size};
+                        $size:#{$sizeRatio * $margins-paddings-size};
                         @if $sizeRatio == 0 {
                             $size:0;
                         }
