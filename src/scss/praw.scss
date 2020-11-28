@@ -1,0 +1,22 @@
+@import "components/_reset.scss";
+@import "config.scss";
+
+@each $name, $color in $colors {
+    $colors: map-merge($colors, (
+        "#{$name}-darken":darken($color, 15%),
+        "#{$name}-lighten":lighten($color, 15%),
+        ));
+}
+
+$colors: map-merge($colors, (
+"transparent":transparent
+));
+
+@import "components/_display.scss";
+@import "components/_colors.scss";
+@import "components/_text.scss";
+@import "components/_sizing.scss";
+@import "components/_table.scss";
+@import "components/_lists.scss";
+@import "components/_icons.scss";
+@import "components/_margins-paddings.scss";

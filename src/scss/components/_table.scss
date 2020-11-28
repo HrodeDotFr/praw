@@ -1,0 +1,25 @@
+table, .table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table {
+    display: table;
+
+    &-zebra {
+        & tbody tr:nth-child(odd) {
+            background: #f2f2f2;
+        }
+
+    }
+    @each $name, $color in $colors {
+        &-#{$name} {
+            background: $color;
+        }
+    }
+}
+
+.table-flat {
+    border-spacing: 0;
+    border-collapse: collapse;
+}

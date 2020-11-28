@@ -1,0 +1,27 @@
+@for $i from 1 through 4 {
+    $i:$i*25;
+    .h-#{$i} {
+        height:#{$i}#{'%'};
+    }
+    .max-h-#{$i} {
+        max-height:#{$i}#{'%'};
+    }
+    .min-h-#{$i} {
+        min-height:#{$i}#{'%'};
+    }
+    .w-#{$i} {
+        width:#{$i}#{'%'};
+    }
+    .max-w-#{$i} {
+        max-width:#{$i}#{'%'};
+    }
+    .min-w-#{$i} {
+        min-width:#{$i}#{'%'};
+    }
+}
+
+@each $sizeName, $sizeRatio in ("x025":0.25, "x05":0.5, "x075":0.75, "x1":1, "x15":1.5, "x2":2, "x3":3, "x4":4, "x5":5) {
+    .font-size-#{$sizeName} {
+        font-size: #{$sizeRatio}rem;
+    }
+}
