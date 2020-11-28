@@ -1,12 +1,12 @@
 # Praw
 Framework front-end
 
-## Installation
+### Installation
 ```sh
 git clone git@github.com:HrodeDotFr/praw.git
 ```
 
-## Documentation
+### Documentation
 [CSS et JS](https://hrodedotfr.github.io/praw/)
 
 ### Packages npm conseillés
