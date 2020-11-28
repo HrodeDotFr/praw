@@ -3,7 +3,7 @@ Framework front-end
 
 ### Installation
 ```sh
-npm i praw gulp gulp-rimraf node-sass gulp-sass gulp-babel @babel/core @babel/preset-env gulp-concat gulp-clean-css babel-preset-minify
+npm i praw gulp gulp-rimraf node-sass gulp-sass gulp-babel @babel/core @babel/preset-env gulp-concat babel-preset-minify
 ```
 
 Exemple de config scss
@@ -53,7 +53,6 @@ const rimraf = require('gulp-rimraf');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
-const minifyCSS = require('gulp-clean-css');
 
 function clean() {
     return gulp.src("dist/*", {read: false}).pipe(rimraf());
@@ -62,9 +61,9 @@ function clean() {
 function styles() {
     return gulp.src('src/scss/config.scss')
             .pipe(gulp.src('node_modules/praw/src/scss/*.scss'))
-            .pipe(sass.sync().on('error', sass.logError))
+            .pipe(concat('praw.scss'))
+            .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(concat('praw.min.css'))
-            .pipe(minifyCSS({compatibility: 'ie8'}))
             .pipe(gulp.dest('dist/css'));
 }
 
