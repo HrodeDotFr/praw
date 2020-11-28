@@ -1,5 +1,4 @@
 @import "components/_reset.scss";
-@import "config.scss";
 
 @each $name, $color in $colors {
     $colors: map-merge($colors, (
