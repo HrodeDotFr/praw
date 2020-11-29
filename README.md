@@ -61,6 +61,7 @@ function clean() {
 function styles() {
     return gulp.src('src/scss/config.scss')
             .pipe(gulp.src('node_modules/praw/src/scss/*.scss'))
+            .pipe(gulp.dest('node_modules/praw/src/scss'))
             .pipe(concat('praw.scss'))
             .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
             .pipe(concat('praw.min.css'))
@@ -88,7 +89,6 @@ exports.fonts = fonts;
 exports.build = build;
 
 exports.default = build;
-
 ```
 
 ### Documentation
