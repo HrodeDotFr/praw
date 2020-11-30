@@ -115,8 +115,8 @@
                 <article id="css_couleurs">
                     <h6>Couleurs</h6>
                     <div>
-                        <p><strong>Couleur du texte</strong> : <code>.color-{couleur}[-darken|-lighten]</code></p>
-                        <p><strong>Couleur de fond</strong> : <code>.bck-{couleur}[-darken|-lighten]</code></p>
+                        <p><strong>Couleur du texte</strong> : <code>.color-{couleur}[-(lighten|darken)]</code></p>
+                        <p><strong>Couleur de fond</strong> : <code>.bck-{couleur}[-(lighten|darken)]</code></p>
                         <p>Avec <code>{couleur}</code>, clé dans $colors dans la config scss</p>
                     </div>
                 </article>
@@ -143,8 +143,8 @@
                 <article id="css_icones">
                     <h6>Icones</h6>
                     <div>
-                        <p><code>.icon-anchor</code></p>
-                        <p><a href="https://feathericons.com/" target="_blank">Voir la liste des icones (feathericons)</a></p>
+                        <p><code>.icon-{icone}</code></p>
+                        <p>Avec <code>{icone}</code>, nom de l'icone feathericons (<a href="https://feathericons.com/" target="_blank">voir la liste des icones</a>)<p>
                     </div>
                 </article>
                 <article id="css_listes">
@@ -157,8 +157,8 @@
                 <article id="css_margins_paddings">
                     <h6>Margins et paddings</h6>
                     <div>
-                        <p>.margin[-(top|right|bottom|left|x|y)][-{breakpoint}][-(none|auto|x025|x05|x15|x2|x25|x3|x4|x5)]</p>
-                        <p>.padding[-(top|right|bottom|left|x|y)][-{breakpoint}][-(none|auto|x025|x05|x15|x2|x25|x3|x4|x5)]</p>
+                        <p><code>.margin[-(top|right|bottom|left|x|y)][-{breakpoint}][-(none|auto|x025|x05|x15|x2|x25|x3|x4|x5)]</code></p>
+                        <p><code>.padding[-(top|right|bottom|left|x|y)][-{breakpoint}][-(none|auto|x025|x05|x15|x2|x25|x3|x4|x5)]</code></p>
                         <p>Avec si précisé, <code>{breakpoint}</code>, clé dans $container-widths dans la config scss (sauf celle à 0px, utilisée par défaut si le breakpoint n'est pas indiqué)</p>
                     </div>
                 </article>
@@ -169,7 +169,7 @@
                 <article id="css_sizing">
                     <h6>Sizing</h6>
                     <div>
-                        <p><strong>Font size</strong> : <code>.font-size-(0.25|0.5|0.75|1|1.5|2|3|4|5)</code> (valeur en rem)</p>
+                        <p><strong>Font size</strong> : <code>.font-size-x(0.25|0.5|0.75|1|1.5|2|3|4|5)</code> (valeur en rem)</p>
                         <p><strong>Height</strong> : <code>.h-(25-50-75-100)</code> <code>.min-h-(25-50-75-100)</code> <code>.max-h-(25-50-75-100)</code> (valeur en %)</p>
                         <p><strong>Width</strong> : <code>.w-(25-50-75-100)</code> <code>.min-w-(25-50-75-100)</code> <code>.max-w-(25-50-75-100)</code> (valeur en %)</p>
                     </div>
