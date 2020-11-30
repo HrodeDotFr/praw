@@ -1,10 +1,5 @@
-ul.unstyled {
-    list-style: none;
-    padding-left: 0;
-}
-
-@each $style in (circle, square, decimal) {
-    ul.#{$style} {
+@each $style in (none, circle, square, decimal) {
+    ul.list-style-#{$style} {
         list-style: #{$style};
     }
 }

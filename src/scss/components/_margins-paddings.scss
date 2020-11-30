@@ -65,11 +65,11 @@
                         }
                     }
 
-                    .#{$type}#{$containerName}-x#{$sizeName} {
+                    .#{$type}-x#{$containerName}#{$sizeName} {
                         #{$type}-right:#{$size};
                         #{$type}-left:#{$size};
                     }
-                    .#{$type}#{$containerName}-y#{$sizeName} {
+                    .#{$type}-y#{$containerName}#{$sizeName} {
                         #{$type}-top:#{$size};
                         #{$type}-bottom:#{$size};
                     }

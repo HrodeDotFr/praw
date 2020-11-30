@@ -115,9 +115,9 @@
                 <article id="css_couleurs">
                     <h6>Couleurs</h6>
                     <div>
-                        <p><code>.color-{couleur}</code> <code>.bck-{couleur}</code></p>
-                        <p><code>.color-{couleur}-lighten</code> <code>.bck-{couleur}-darken</code></p>
-                        <p>Avec {couleur}, clé dans $colors dans la config scss</p>
+                        <p><strong>Couleur du texte</strong> : <code>.color-{couleur}[-darken|-lighten]</code></p>
+                        <p><strong>Couleur de fond</strong> : <code>.bck-{couleur}[-darken|-lighten]</code></p>
+                        <p>Avec <code>{couleur}</code>, clé dans $colors dans la config scss</p>
                     </div>
                 </article>
                 <article id="css_cursors">
@@ -126,7 +126,11 @@
                 </article>
                 <article id="css_display">
                     <h6>Display</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p><code>.d-{display}</code></p>
+                        <p><cite>Exemple : <code>display: flex;</code> avec <code>.d-flex</code></cite></p>
+                        <p>Avec <code>{display}</code> inclus dans : inline, block, contents, flex, grid, inline-block, inline-flex, inline-grid, inline-table, list-item, run-in, table, table-caption, table-column-group, table-header-group, table-footer-group, table-row-group, table-cell, table-column, table-row, none, initial, inherit</p>
+                    </div>
                 </article>
                 <article id="css_formulaires">
                     <h6>Formulaires</h6>
@@ -138,15 +142,25 @@
                 </article>
                 <article id="css_icones">
                     <h6>Icones</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p><code>.icon-anchor</code></p>
+                        <p><a href="https://feathericons.com/" target="_blank">Voir la liste des icones (feathericons)</a></p>
+                    </div>
                 </article>
                 <article id="css_listes">
                     <h6>Listes</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p><code>ul.list-style-{style}</code></p>
+                        <p>Avec <code>{style}</code> inclus dans : none, circle, square, decimal</p>
+                    </div>
                 </article>
                 <article id="css_margins_paddings">
                     <h6>Margins et paddings</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p>.margin[-(top|right|bottom|left|x|y)][-{breakpoint}][-(none|auto|x025|x05|x15|x2|x25|x3|x4|x5)]</p>
+                        <p>.padding[-(top|right|bottom|left|x|y)][-{breakpoint}][-(none|auto|x025|x05|x15|x2|x25|x3|x4|x5)]</p>
+                        <p>Avec si précisé, <code>{breakpoint}</code>, clé dans $container-widths dans la config scss (sauf celle à 0px, utilisée par défaut si le breakpoint n'est pas indiqué)</p>
+                    </div>
                 </article>
                 <article id="css_scroll">
                     <h6>Scroll</h6>
@@ -154,11 +168,19 @@
                 </article>
                 <article id="css_sizing">
                     <h6>Sizing</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p><strong>Font size</strong> : <code>.font-size-(0.25|0.5|0.75|1|1.5|2|3|4|5)</code> (valeur en rem)</p>
+                        <p><strong>Height</strong> : <code>.h-(25-50-75-100)</code> <code>.min-h-(25-50-75-100)</code> <code>.max-h-(25-50-75-100)</code> (valeur en %)</p>
+                        <p><strong>Width</strong> : <code>.w-(25-50-75-100)</code> <code>.min-w-(25-50-75-100)</code> <code>.max-w-(25-50-75-100)</code> (valeur en %)</p>
+                    </div>
                 </article>
                 <article id="css_tableaux">
                     <h6>Tableaux</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p><strong>Tableau sans spacing et avec collapse</strong> : <code>.table-flat</code></p>
+                        <p><strong>Couleur de fond des lignes via nth-child</strong> : <code>.table-zebra-(even|odd)-{couleur}</code></p>
+                        <p>Avec <code>{couleur}</code>, clé dans $colors dans la config scss</p>
+                    </div>
                 </article>
                 <article id="css_tabs">
                     <h6>Tabs</h6>
@@ -170,7 +192,16 @@
                 </article>
                 <article id="css_texte">
                     <h6>Texte</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p><code>.text-right</code></p>
+                        <p><code>.text-center</code></p>
+                        <p><code>.text-left</code></p>
+                        <p><code>.letter-spacing-(1->10)</code> (valeur en px)</p>
+                        <p><code>.text-italic</code></p>
+                        <p><code>.text-bold</code></p>
+                        <p><code>.text-underline</code></p>
+                        <p><code>.text-line-through</code></p>
+                    </div>
                 </article>
             </section>
             <hr>
