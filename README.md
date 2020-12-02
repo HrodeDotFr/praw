@@ -17,8 +17,8 @@ $colors: (
 "err": #E74C3C,
 "info": #0097E6,
 "warn": #F1C40F,
-"light": #EDF2F4, // OBLIGATOIRE
-"dark": #2B2D42, // OBLIGATOIRE
+"light": #EDF2F4,
+"dark": #2B2D42,
 "grey": #8D99AE,
 "white": #FBFEF9,
 "black": #1A202C,
