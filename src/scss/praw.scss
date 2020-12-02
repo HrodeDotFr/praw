@@ -11,6 +11,7 @@ $colors: map-merge($colors, (
 "transparent":transparent
 ));
 
+@import "components/_functions.scss";
 @import "components/_display.scss";
 @import "components/_colors.scss";
 @import "components/_text.scss";
@@ -21,3 +22,4 @@ $colors: map-merge($colors, (
 @import "components/_margins-paddings.scss";
 @import "components/_borders.scss";
 @import "components/_cursors.scss";
+@import "components/_tags.scss";

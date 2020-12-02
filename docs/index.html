@@ -111,7 +111,6 @@
                         <p><strong>Couleur</strong> : <code>.border[-(top|right|bottom|left)]-{couleur}</code></p>
                         <p><strong>Width</strong> : <code>.border[-(top|right|bottom|left)]-x(2->15)</code> (valeur en px)</p>
                         <p><strong>Radius</strong> : <code>.border-radius-x(5->10->...->60)</code> (valeur en px)</p>
-                        <p>Avec <code>{couleur}</code>, clé dans $colors dans la config scss</p>
                     </div>
                 </article>
                 <article id="css_boutons">
@@ -121,9 +120,9 @@
                 <article id="css_couleurs">
                     <h6>Couleurs</h6>
                     <div>
-                        <p><strong>Couleur du texte</strong> : <code>.color-{couleur}[-(lighten|darken)]</code></p>
-                        <p><strong>Couleur de fond</strong> : <code>.bck-{couleur}[-(lighten|darken)]</code></p>
-                        <p>Avec <code>{couleur}</code>, clé dans $colors dans la config scss</p>
+                        <p><strong>Couleur du texte</strong> : <code>.color[-hover]-{couleur}</code></p>
+                        <p><strong>Couleur de fond</strong> : <code>.bck[-hover]-{couleur}</code></p>
+                        <p>Avec <code>{couleur}</code>, clé dans $colors dans la config scss (chaque couleur en config a 2 variantes : <code>-lighten</code> et <code>-darken</code>)<p>
                     </div>
                 </article>
                 <article id="css_cursors">
@@ -188,7 +187,6 @@
                     <div>
                         <p><strong>Tableau sans spacing et avec collapse</strong> : <code>.table-flat</code></p>
                         <p><strong>Couleur de fond des lignes via nth-child</strong> : <code>.table-zebra-(even|odd)-{couleur}</code></p>
-                        <p>Avec <code>{couleur}</code>, clé dans $colors dans la config scss</p>
                     </div>
                 </article>
                 <article id="css_tabs">
@@ -197,7 +195,13 @@
                 </article>
                 <article id="css_tags">
                     <h6>Tags</h6>
-                    <div><p>TODO</p></div>
+                    <div>
+                        <p><strong>Tag seul</strong> : <code>.tag</code></p>
+                        <p><strong>Tag coloré</strong> : <code>.tag-{couleur}</code></p>
+                        <p><strong>Tags groupés</strong> : parent <code>.tags.tags-grouped</code>, enfants <code>.tag</code><p>
+                        <p><strong>Liste de tags</strong> : parent <code>.tags</code>, enfants <code>.tag</code><p>
+                        <p><strong>Alignement de la liste de tags</strong> : <code>.is-centered</code> <code>.is-right</code><p>
+                    </div>
                 </article>
                 <article id="css_texte">
                     <h6>Texte</h6>

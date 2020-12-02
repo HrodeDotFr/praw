@@ -5,4 +5,10 @@
     .bck-#{$name} {
         background-color: $color;
     }
+    .color-hover-#{$name}:hover {
+        color: $color;
+    }
+    .bck-hover-#{$name}:hover {
+        background-color: $color;
+    }
 }

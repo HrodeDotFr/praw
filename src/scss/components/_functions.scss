@@ -1,0 +1,8 @@
+@function getColorByLightness($color) {  
+    @if (lightness( $color ) > 55) {
+        @return map-get($colors, "dark");
+    }
+    @else {
+        @return map-get($colors, "light");
+    }
+}
