@@ -53,6 +53,7 @@ const rimraf = require('gulp-rimraf');
 const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
+const gos = require('gulp-obfuscate-selectors');
 
 function clean() {
     return gulp.src("dist/*", {read: false}).pipe(rimraf());
@@ -75,12 +76,18 @@ function scripts() {
             .pipe(gulp.dest('dist/js'));
 }
 
+function views() {
+    return gulp.src(['dist/**/*.css', 'src/**/*.html', 'dist/**/*.js'])
+            .pipe(gos.run())
+            .pipe(gulp.dest('dist'));
+}
+
 function fonts() {
     return gulp.src('node_modules/praw/src/fonts/*')
             .pipe(gulp.dest('dist/fonts'));
 }
 
-var build = gulp.series(clean, gulp.parallel(styles, scripts, fonts));
+var build = gulp.series(clean, gulp.parallel(fonts, gulp.series(style, scripts, views)));
 
 exports.clean = clean;
 exports.styles = styles;
