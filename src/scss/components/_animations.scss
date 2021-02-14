@@ -156,11 +156,11 @@
 
 .hover-grow {
     transition-duration: 0.32s;
+}
 
-    &:hover {
-        transform: scale(1.1);
-        transition-duration: 0.08s;
-    }
+.hover-grow:hover {
+    transform: scale(1.1);
+    transition-duration: 0.08s;
 }
 
 .animated {
@@ -168,88 +168,88 @@
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+}
 
-    &.loading {
-        display: block;
-        position: relative;
+.animated.loading {
+    display: block;
+    position: relative;
+}
 
-        &::after {
-            border: 2px solid #ced4da;
-            border-radius: 50%;
-            border-right-color: transparent;
-            border-top-color: transparent;
-            content: '';
-            display: block;
-            height: 1rem;
-            width: 1rem;
-            left: calc(50% - (1em / 1.25));
-            top: calc(50% - (1em / 1.35));
-            position: absolute;
-            -webkit-animation: loading 500ms infinite linear;
-            animation: loading 500ms infinite linear;
-        }
+.animated.loading::after {
+    border: 2px solid #ced4da;
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    content: '';
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    left: calc(50% - (1em / 1.25));
+    top: calc(50% - (1em / 1.35));
+    position: absolute;
+    -webkit-animation: loading 500ms infinite linear;
+    animation: loading 500ms infinite linear;
+}
 
-        &.loading-white::after {
-            border-left-color: #fff;
-            border-bottom-color: #fff;
-        }
+.animated.loading.loading-white::after {
+    border-left-color: #fff;
+    border-bottom-color: #fff;
+}
 
-        &.loading-left {
-            padding-left: 3rem;
+.animated.loading.loading-left {
+    padding-left: 3rem;
+}
 
-            &::after {
-                left: 1rem;
-                right: auto;
-            }
-        }
+.animated.loading.loading-left::after {
+    left: 1rem;
+    right: auto;
+}
 
-        &.loading-right {
-            padding-right: 3rem;
+.animated.loading.loading-right {
+    padding-right: 3rem;
+}
 
-            &::after {
-                left: auto;
-                right: 1rem;
-            }
-        }
+.animated.loading.loading-right::after {
+    left: auto;
+    right: 1rem;
+}
 
-        &.hide-text {
-            color: transparent !important;
-        }
-    }
+.animated.loading.hide-text {
+    color: transparent !important;
+}
 
-    &.pulse {
-        animation: pound 0.35s infinite alternate;
-        -webkit-animation: pound 0.35s infinite alternate;
-        vertical-align: baseline;
-    }
+.animated.pulse {
+    animation: pound 0.35s infinite alternate;
+    -webkit-animation: pound 0.35s infinite alternate;
+    vertical-align: baseline;
+}
 
-    &.bounce {
-        animation-name: bounce;
-        -webkit-animation-name: bounce;
-        transform-origin: center bottom;
-        -webkit-transform-origin: center bottom;
-    }
+.animated.bounce {
+    animation-name: bounce;
+    -webkit-animation-name: bounce;
+    transform-origin: center bottom;
+    -webkit-transform-origin: center bottom;
+}
 
-    &.bounceIn {
-        animation-name: bounceIn;
-    }
+.animated.bounceIn {
+    animation-name: bounceIn;
+}
 
-    &.fadeIn {
-        -webkit-animation-name: fadeIn;
-        animation-name: fadeIn;
-    }
+.animated.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
 
-    &.infinite {
-        -webkit-animation-iteration-count: infinite;
-        animation-iteration-count: infinite;
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
 
-        &.alternate {
-            animation-direction: alternate;
-        }
-    }
+.animated.infinite.alternate {
+    animation-direction: alternate;
+}
 
-    &.paused {
-        -webkit-animation-play-state: paused !important;
-        animation-play-state: paused !important;
-    }
+.animated.paused {
+    -webkit-animation-play-state: paused !important;
+    animation-play-state: paused !important;
 }

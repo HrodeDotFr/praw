@@ -4,105 +4,97 @@
     border-collapse: collapse;
     border-spacing: 0;
     text-align: center;
+}
 
-    td, th {
-        border: 1px solid rgba(222, 226, 230, 0.5);
-        border-width: 0 0 1px;
-        padding: 0.75rem;
-        vertical-align: top;
-        text-align: inherit;
-        margin: 0;
-    }
+.table td,
+.table th {
+    border: 1px solid rgba(222, 226, 230, 0.5);
+    border-width: 0 0 1px;
+    padding: 0.75rem;
+    vertical-align: top;
+    text-align: inherit;
+    margin: 0;
+}
 
-    tr {
-        transition: all 0.3s;
+.table tr {
+    transition: all 0.3s;
+}
 
-        &.selected {
-            background-color: map-get($colors, "primary");
-            color: #fff;
-        }
-    }
+.table tr.selected {
+    background-color: var(--cirrus-primary);
+    color: #fff;
+}
 
-    .table caption {
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-        color: #dee2e6;
-        text-align: left;
-        caption-side: bottom;
-    }
+.table .table caption {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    color: #dee2e6;
+    text-align: left;
+    caption-side: bottom;
+}
 
-    tr:not(.selected):hover, &.striped tbody tr:not(.selected):nth-child(even):hover {
-        background-color: rgba(222, 226, 230, 0.15);
-    }
+.table tr:not(.selected):hover,
+.table.striped tbody tr:not(.selected):nth-child(even):hover {
+    background-color: rgba(222, 226, 230, 0.15);
+}
 
-    thead {
-        th {
-            border-bottom: 2px solid rgba(222, 226, 230, 0.5);
-            padding: 1rem;
-        }
+.table thead th,
+.table thead {
+    border-bottom: 2px solid rgba(222, 226, 230, 0.5);
+}
 
-        border-bottom: 2px solid rgba(222, 226, 230, 0.5);
-    }
+.table thead th,
+.table tfoot th {
+    padding: 1rem;
+}
 
-    tfoot th {
-        padding: 1rem;
-        border-top: 2px solid rgba(222, 226, 230, 0.5);
-        border-bottom: none;
-    }
+.table tfoot th {
+    border-top: 2px solid rgba(222, 226, 230, 0.5);
+    border-bottom: none;
+}
 
-    &.bordered {
-        thead {
-            th {
-                border-bottom: 1px solid rgba(222, 226, 230, 0.5);
-            }
+.table.bordered thead th,
+.table.bordered thead {
+    border-bottom: 1px solid rgba(222, 226, 230, 0.5);
+}
 
-            border-bottom: 1px solid rgba(222, 226, 230, 0.5);
-        }
+.table.bordered td,
+.table.bordered th {
+    border: 1px solid rgba(219, 219, 219, 0.5);
+}
 
-        td, th {
-            border: 1px solid rgba(219, 219, 219, 0.5);
-        }
+.table.bordered thead td,
+.table.bordered thead {
+    border-width: 1px;
+}
 
-        thead {
-            td {
-                border-width: 1px;
-            }
+.table.striped tbody tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
 
-            border-width: 1px;
-        }
-    }
+.table.small td,
+.table.small th {
+    padding: 0.25rem 0.75rem;
+}
 
-    &.striped tbody tr:nth-child(even) {
-        background-color: rgba(0, 0, 0, 0.05);
-    }
+.table.fixed-head thead {
+    position: relative;
+    display: block;
+}
 
-    &.small {
-        td, th {
-            padding: 0.25rem 0.75rem;
-        }
-    }
+.table.fixed-head tbody {
+    min-height: 200px;
+    display: block;
+    overflow: auto;
+}
 
-    &.fixed-head {
-        thead {
-            position: relative;
-            display: block;
-        }
+.table.fixed-head tr {
+    display: table;
+    width: 100%;
+}
 
-        tbody {
-            min-height: 200px;
-            display: block;
-            overflow: auto;
-        }
-
-        tr {
-            display: table;
-            width: 100%;
-        }
-    }
-
-    &.borderless {
-        thead th, th, td {
-            border: none;
-        }
-    }
+.table.borderless thead th,
+.table.borderless th,
+.table.borderless td {
+    border: none;
 }

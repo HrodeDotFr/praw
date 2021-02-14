@@ -1,96 +1,100 @@
 .pagination {
     display: flex;
     display: -ms-flexbox;
+}
 
-    .pagination-item {
-        -webkit-flex: 1 0 50%;
-        -ms-flex: 1 0 50%;
-        flex: 1 0 50%;
-        margin: 1rem 0.1rem;
-        transition: all 0.3s;
+.pagination .pagination-item {
+    -webkit-flex: 1 0 50%;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+    margin: 1rem 0.1rem;
+    transition: all 0.3s;
+}
 
-        &:hover {
-            p, h1, h2, h3, h4, h5, h6 {
-                transition: all 0.3s;
-                color: map-get($colors, "primary");
-            }
-        }
+.pagination .pagination-item:hover p,
+.pagination .pagination-item:hover h1,
+.pagination .pagination-item:hover h2,
+.pagination .pagination-item:hover h3,
+.pagination .pagination-item:hover h4,
+.pagination .pagination-item:hover h5,
+.pagination .pagination-item:hover h6 {
+    transition: all 0.3s;
+    color: var(--cirrus-primary);
+}
 
-        &:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
-            transition: all 0.3s;
-            color: map-get($colors, "primary");
-        }
+.pagination .pagination-item:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
+    transition: all 0.3s;
+    color: var(--cirrus-primary);
+}
 
-        &.pagination-next {
-            text-align: right;
-        }
+.pagination .pagination-item.pagination-next {
+    text-align: right;
+}
 
-        &.pagination-prev {
-            text-align: left;
-        }
+.pagination .pagination-item.pagination-prev {
+    text-align: left;
+}
 
-        a {
-            color: #495057;
+.pagination .pagination-item a {
+    color: #495057;
+}
 
-            &[disabled], &.disabled {
-                cursor: pointer;
-                opacity: 0.5;
-                pointer-events: none;
-                user-select: none;
-            }
-        }
+.pagination .pagination-item a[disabled], .pagination .pagination-item a.disabled {
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
 
-        .pagination-item-subtitle {
-            opacity: 0.7;
-            margin: 0;
-        }
+.pagination .pagination-item .pagination-item-subtitle {
+    opacity: 0.7;
+    margin: 0;
+}
 
-        &.short {
-            border-radius: 0.1rem;
-            margin: 0.2rem 0;
-            -webkit-flex: 0;
-            -ms-flex: 0;
-            flex: 0;
+.pagination .pagination-item.short {
+    border-radius: 0.1rem;
+    margin: 0.2rem 0;
+    -webkit-flex: 0;
+    -ms-flex: 0;
+    flex: 0;
+}
 
-            &:first-child a {
-                border-top-left-radius: 0.25rem;
-                border-bottom-left-radius: 0.25rem;
-            }
+.pagination .pagination-item.short:first-child a {
+    border-top-left-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+}
 
-            &:last-child a {
-                border-top-right-radius: 0.25rem;
-                border-bottom-right-radius: 0.25rem;
-            }
+.pagination .pagination-item.short:last-child a {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
 
-            &:not([disabled]):not(.disabled):not(.selected):hover {
-                background-color: rgba(0, 0, 0, 0.07);
-            }
+.pagination .pagination-item.short:not([disabled]):not(.disabled):not(.selected):hover {
+    background-color: rgba(0, 0, 0, 0.07);
+}
 
-            &.selected {
-                background-color: map-get($colors, "primary");
-                color: #fff;
+.pagination .pagination-item.short.selected {
+    background-color: var(--cirrus-primary);
+    color: #fff;
+}
 
-                a {
-                    color: #fff;
-                }
-            }
+.pagination .pagination-item.short.selected a {
+    color: #fff;
+}
 
-            &.ellipses {
-                color: #adb5bd;
-                pointer-events: none;
-            }
+.pagination .pagination-item.short.ellipses {
+    color: #adb5bd;
+    pointer-events: none;
+}
 
-            a {
-                display: inline-block;
-                line-height: 1.25;
-                padding: 0.5rem 0.75rem;
-            }
-        }
-    }
+.pagination .pagination-item.short a {
+    display: inline-block;
+    line-height: 1.25;
+    padding: 0.5rem 0.75rem;
+}
 
-    &.pagination-bordered .pagination-item.short a {
-        border: 1px solid #dee2e6;
-        border-radius: 0;
-        margin-left: -1px;
-    }
+.pagination.pagination-bordered .pagination-item.short a {
+    border: 1px solid #dee2e6;
+    border-radius: 0;
+    margin-left: -1px;
 }

@@ -1,5 +1,5 @@
 a {
-    color: map-get($colors, "complementary");
+    color: var(--cirrus-link);
     font-weight: 600;
     padding: 2px;
     text-decoration: none;
@@ -7,7 +7,7 @@ a {
 }
 
 a:hover {
-    font-style: italic;
+    color: var(--cirrus-link-dark);
     transition: all 0.3s;
 }
 
