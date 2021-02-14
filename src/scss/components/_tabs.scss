@@ -48,7 +48,7 @@
 
             &.selected {
                 a, .tab-item-content {
-                    color: var(--cirrus-primary);
+                    color: map-get($colors, "primary");
                     border-color: #dee2e6;
                     border-bottom-color: transparent !important;
                 }
@@ -122,8 +122,8 @@
 
         &.selected {
             a, .tab-item-content {
-                border-bottom-color: var(--cirrus-primary);
-                color: var(--cirrus-primary);
+                border-bottom-color: map-get($colors, "primary");
+                color: map-get($colors, "primary");
                 border-width: 2px;
                 transition: all 0.3s;
             }

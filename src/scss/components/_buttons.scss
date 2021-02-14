@@ -188,7 +188,7 @@
 }
 
 .btn.btn-primary, button.btn-primary, [type="submit"].btn-primary, [type="reset"].btn-primary, [type="button"].btn-primary {
-    --btn-color:var(--cirrus-primary);
+    --btn-color:map-get($colors, "primary");
     --btn-fg:var(--cirrus-light);
     --btn-border-color:var(--cirrus-accent-border);
 }
@@ -202,7 +202,7 @@
 }
 
 .btn.btn-primary.outline:hover, button.btn-primary.outline:hover, [type="submit"].btn-primary.outline:hover, [type="reset"].btn-primary.outline:hover, [type="button"].btn-primary.outline:hover {
-    --btn-color:var(--cirrus-primary);
+    --btn-color:map-get($colors, "primary");
 }
 
 .btn.btn-info, button.btn-info, [type="submit"].btn-info, [type="reset"].btn-info, [type="button"].btn-info {

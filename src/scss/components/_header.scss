@@ -237,7 +237,7 @@
 }
 
 .nav-item.has-sub .nav-dropdown-link::after {
-    border: 2px solid var(--cirrus-primary);
+    border: 2px solid map-get($colors, "primary");
     border-right: 0;
     border-top: 0;
     display: block;

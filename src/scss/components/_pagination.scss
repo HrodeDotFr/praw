@@ -12,13 +12,13 @@
         &:hover {
             p, h1, h2, h3, h4, h5, h6 {
                 transition: all 0.3s;
-                color: var(--cirrus-primary);
+                color: map-get($colors, "primary");
             }
         }
 
         &:not(.selected):hover *:not([disabled]):not(.disabled):not(.ellipses) {
             transition: all 0.3s;
-            color: var(--cirrus-primary);
+            color: map-get($colors, "primary");
         }
 
         &.pagination-next {
@@ -67,7 +67,7 @@
             }
 
             &.selected {
-                background-color: var(--cirrus-primary);
+                background-color: map-get($colors, "primary");
                 color: #fff;
 
                 a {

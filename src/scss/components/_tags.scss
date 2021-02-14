@@ -79,7 +79,7 @@
     }
 
     &.tag--primary {
-        background-color: var(--cirrus-primary);
+        background-color: map-get($colors, "primary");
         color: #fff;
         background-color: #f03d4d;
         color: #fff;

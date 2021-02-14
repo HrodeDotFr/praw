@@ -86,14 +86,14 @@ ul {
 
         &:hover > a {
             background-color: rgba(208, 208, 208, 0.3);
-            color: var(--cirrus-primary);
+            color: map-get($colors, "primary");
             -webkit-transition: all var(--animation-duration);
             transition: all var(--animation-duration);
         }
 
         &.selected > a {
             color: #fff;
-            background-color: var(--cirrus-primary);
+            background-color: map-get($colors, "primary");
         }
 
         .menu-addon {

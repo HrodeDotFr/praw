@@ -827,15 +827,15 @@ label {
         }
 
         &:checked ~ .form-ext-label:before {
-            background-color: var(--cirrus-primary);
+            background-color: map-get($colors, "primary");
         }
 
         &.form-ext-input--primary {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-primary);
+                color: map-get($colors, "primary");
 
                 &:before {
-                    background-color: var(--cirrus-primary);
+                    background-color: map-get($colors, "primary");
                 }
             }
 
@@ -991,8 +991,8 @@ label {
         input {
             &[type='checkbox']:checked + {
                 .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-primary);
-                    border-color: var(--cirrus-primary);
+                    background-color: map-get($colors, "primary");
+                    border-color: map-get($colors, "primary");
                     color: #fff;
                     position: relative;
                     transition: all 0.4s ease;
@@ -1001,8 +1001,8 @@ label {
 
             &[type='radio']:checked + {
                 .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-primary);
-                    border-color: var(--cirrus-primary);
+                    background-color: map-get($colors, "primary");
+                    border-color: map-get($colors, "primary");
                     color: #fff;
                     position: relative;
                     transition: all 0.4s ease;
@@ -1043,25 +1043,25 @@ label {
         &.form-ext-toggle--primary input {
             &[type='checkbox']:checked + {
                 .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-primary);
-                    border-color: var(--cirrus-primary);
+                    background-color: map-get($colors, "primary");
+                    border-color: map-get($colors, "primary");
                 }
             }
 
             &[type='radio']:checked + {
                 .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-primary);
-                    border-color: var(--cirrus-primary);
+                    background-color: map-get($colors, "primary");
+                    border-color: map-get($colors, "primary");
                 }
             }
         }
 
         .form-ext-toggle--primary .form-ext-toggle__toggler {
-            border-color: var(--cirrus-primary);
-            color: var(--cirrus-primary);
+            border-color: map-get($colors, "primary");
+            color: map-get($colors, "primary");
 
             i::after {
-                background-color: var(--cirrus-primary);
+                background-color: map-get($colors, "primary");
             }
         }
 

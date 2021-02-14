@@ -18,7 +18,7 @@
         transition: all 0.3s;
 
         &.selected {
-            background-color: var(--cirrus-primary);
+            background-color: map-get($colors, "primary");
             color: #fff;
         }
     }

@@ -43,8 +43,8 @@
     }
 
     &.toast--primary {
-        background-color: var(--cirrus-primary);
-        border-color: var(--cirrus-primary);
+        background-color: map-get($colors, "primary");
+        border-color: map-get($colors, "primary");
         background-color: #f03d4d;
         border-color: #f03d4d;
     }
