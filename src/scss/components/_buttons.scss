@@ -18,14 +18,14 @@
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
-    --btn-color: #f8f9fa;
-    --btn-fg: #495057;
-    --btn-border-color: #e9ecef;
+    --btn-color:#f8f9fa;
+    --btn-fg:#495057;
+    --btn-border-color:#e9ecef;
 }
 
 .btn:hover, button:hover, [type="submit"]:hover, [type="reset"]:hover, [type="button"]:hover {
     transition: all var(--animation-duration);
-    --btn-color: #f1f3f5;
+    --btn-color:#f1f3f5;
     color: var(--btn-fg);
 }
 
@@ -47,11 +47,11 @@
 }
 
 .btn.outline, button.outline, [type="submit"].outline, [type="reset"].outline, [type="button"].outline {
-    --btn-color: transparent;
+    --btn-color:transparent;
 }
 
 .btn.outline:hover, button.outline:hover, [type="submit"].outline:hover, [type="reset"].outline:hover, [type="button"].outline:hover {
-    --btn-color: #e9ecef;
+    --btn-color:#e9ecef;
 }
 
 .btn.loading:active::after, button.loading:active::after, [type="submit"].loading:active::after, [type="reset"].loading:active::after, [type="button"].loading:active::after {
@@ -124,9 +124,9 @@
 }
 
 .btn.btn-transparent, button.btn-transparent, [type="submit"].btn-transparent, [type="reset"].btn-transparent, [type="button"].btn-transparent {
-    --btn-color: transparent;
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: transparent;
+    --btn-color:transparent;
+    --btn-fg:var(--cirrus-dark);
+    --btn-border-color:transparent;
 }
 
 .btn.btn-transparent:focus, button.btn-transparent:focus, [type="submit"].btn-transparent:focus, [type="reset"].btn-transparent:focus, [type="button"].btn-transparent:focus {
@@ -134,21 +134,21 @@
 }
 
 .btn.btn-transparent:hover, button.btn-transparent:hover, [type="submit"].btn-transparent:hover, [type="reset"].btn-transparent:hover, [type="button"].btn-transparent:hover {
-    --btn-color: rgba(0, 0, 0, 0.1);
+    --btn-color:rgba(0, 0, 0, 0.1);
 }
 
 .btn.btn-transparent.outline, button.btn-transparent.outline, [type="submit"].btn-transparent.outline, [type="reset"].btn-transparent.outline, [type="button"].btn-transparent.outline {
-    --btn-fg: var(--cirrus-dark);
+    --btn-fg:var(--cirrus-dark);
 }
 
 .btn.btn-light, button.btn-light, [type="submit"].btn-light, [type="reset"].btn-light, [type="button"].btn-light {
-    --btn-color: var(--cirrus-light);
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: var(--cirrus-light);
+    --btn-color:var(--cirrus-light);
+    --btn-fg:var(--cirrus-dark);
+    --btn-border-color:var(--cirrus-light);
 }
 
 .btn.btn-light:hover, button.btn-light:hover, [type="submit"].btn-light:hover, [type="reset"].btn-light:hover, [type="button"].btn-light:hover {
-    --btn-color: var(--cirrus-light-hover);
+    --btn-color:var(--cirrus-light-hover);
 }
 
 .btn.btn-light:focus, button.btn-light:focus, [type="submit"].btn-light:focus, [type="reset"].btn-light:focus, [type="button"].btn-light:focus {
@@ -156,9 +156,9 @@
 }
 
 .btn.btn-dark, button.btn-dark, [type="submit"].btn-dark, [type="reset"].btn-dark, [type="button"].btn-dark {
-    --btn-color: var(--cirrus-dark);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-dark);
+    --btn-color:var(--cirrus-dark);
+    --btn-fg:var(--cirrus-light);
+    --btn-border-color:var(--cirrus-dark);
 }
 
 .btn.btn-dark:focus, button.btn-dark:focus, [type="submit"].btn-dark:focus, [type="reset"].btn-dark:focus, [type="button"].btn-dark:focus {
@@ -166,17 +166,17 @@
 }
 
 .btn.btn-dark:hover, button.btn-dark:hover, [type="submit"].btn-dark:hover, [type="reset"].btn-dark:hover, [type="button"].btn-dark:hover {
-    --btn-color: var(--cirrus-dark-hover);
+    --btn-color:var(--cirrus-dark-hover);
 }
 
 .btn.btn-dark.outline:hover, button.btn-dark.outline:hover, [type="submit"].btn-dark.outline:hover, [type="reset"].btn-dark.outline:hover, [type="button"].btn-dark.outline:hover {
-    --btn-color: var(--cirrus-dark);
+    --btn-color:var(--cirrus-dark);
 }
 
 .btn.btn-black, button.btn-black, [type="submit"].btn-black, [type="reset"].btn-black, [type="button"].btn-black {
-    --btn-color: #000;
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: #000;
+    --btn-color:#000;
+    --btn-fg:var(--cirrus-light);
+    --btn-border-color:#000;
 }
 
 .btn.btn-black:focus, button.btn-black:focus, [type="submit"].btn-black:focus, [type="reset"].btn-black:focus, [type="button"].btn-black:focus {
@@ -184,13 +184,13 @@
 }
 
 .btn.btn-black:hover, button.btn-black:hover, [type="submit"].btn-black:hover, [type="reset"].btn-black:hover, [type="button"].btn-black:hover {
-    --btn-color: #000;
+    --btn-color:#000;
 }
 
 .btn.btn-primary, button.btn-primary, [type="submit"].btn-primary, [type="reset"].btn-primary, [type="button"].btn-primary {
-    --btn-color: var(--cirrus-primary);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-accent-border);
+    --btn-color:var(--cirrus-primary);
+    --btn-fg:var(--cirrus-light);
+    --btn-border-color:var(--cirrus-accent-border);
 }
 
 .btn.btn-primary:focus, button.btn-primary:focus, [type="submit"].btn-primary:focus, [type="reset"].btn-primary:focus, [type="button"].btn-primary:focus {
@@ -198,17 +198,17 @@
 }
 
 .btn.btn-primary:hover, button.btn-primary:hover, [type="submit"].btn-primary:hover, [type="reset"].btn-primary:hover, [type="button"].btn-primary:hover {
-    --btn-color: var(--cirrus-accent-hover);
+    --btn-color:var(--cirrus-accent-hover);
 }
 
 .btn.btn-primary.outline:hover, button.btn-primary.outline:hover, [type="submit"].btn-primary.outline:hover, [type="reset"].btn-primary.outline:hover, [type="button"].btn-primary.outline:hover {
-    --btn-color: var(--cirrus-primary);
+    --btn-color:var(--cirrus-primary);
 }
 
 .btn.btn-info, button.btn-info, [type="submit"].btn-info, [type="reset"].btn-info, [type="button"].btn-info {
-    --btn-color: var(--cirrus-info);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-info);
+    --btn-color:var(--cirrus-info);
+    --btn-fg:var(--cirrus-light);
+    --btn-border-color:var(--cirrus-info);
 }
 
 .btn.btn-info:focus, button.btn-info:focus, [type="submit"].btn-info:focus, [type="reset"].btn-info:focus, [type="button"].btn-info:focus {
@@ -216,17 +216,17 @@
 }
 
 .btn.btn-info:hover, button.btn-info:hover, [type="submit"].btn-info:hover, [type="reset"].btn-info:hover, [type="button"].btn-info:hover {
-    --btn-color: var(--cirrus-info-hover);
+    --btn-color:var(--cirrus-info-hover);
 }
 
 .btn.btn-info.outline:hover, button.btn-info.outline:hover, [type="submit"].btn-info.outline:hover, [type="reset"].btn-info.outline:hover, [type="button"].btn-info.outline:hover {
-    --btn-color: var(--cirrus-info);
+    --btn-color:var(--cirrus-info);
 }
 
 .btn.btn-link, button.btn-link, [type="submit"].btn-link, [type="reset"].btn-link, [type="button"].btn-link {
-    --btn-color: var(--cirrus-link);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-link);
+    --btn-color:var(--cirrus-link);
+    --btn-fg:var(--cirrus-light);
+    --btn-border-color:var(--cirrus-link);
 }
 
 .btn.btn-link:focus, button.btn-link:focus, [type="submit"].btn-link:focus, [type="reset"].btn-link:focus, [type="button"].btn-link:focus {
@@ -234,24 +234,24 @@
 }
 
 .btn.btn-link:hover, button.btn-link:hover, [type="submit"].btn-link:hover, [type="reset"].btn-link:hover, [type="button"].btn-link:hover {
-    --btn-color: var(--cirrus-link-dark);
+    --btn-color:var(--cirrus-link-dark);
 }
 
 .btn.btn-link.outline, button.btn-link.outline, [type="submit"].btn-link.outline, [type="reset"].btn-link.outline, [type="button"].btn-link.outline {
-    --btn-fg: var(--cirrus-link);
+    --btn-fg:var(--cirrus-link);
     border: 1px solid transparent;
 }
 
 .btn.btn-link.outline:hover, button.btn-link.outline:hover, [type="submit"].btn-link.outline:hover, [type="reset"].btn-link.outline:hover, [type="button"].btn-link.outline:hover {
-    --btn-color: var(--cirrus-link-hover);
+    --btn-color:var(--cirrus-link-hover);
     border: 1px solid transparent;
     text-decoration: underline;
 }
 
 .btn.btn-success, button.btn-success, [type="submit"].btn-success, [type="reset"].btn-success, [type="button"].btn-success {
-    --btn-color: var(--cirrus-success);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-success);
+    --btn-color:var(--cirrus-success);
+    --btn-fg:var(--cirrus-light);
+    --btn-border-color:var(--cirrus-success);
 }
 
 .btn.btn-success:focus, button.btn-success:focus, [type="submit"].btn-success:focus, [type="reset"].btn-success:focus, [type="button"].btn-success:focus {
@@ -259,17 +259,17 @@
 }
 
 .btn.btn-success:hover, button.btn-success:hover, [type="submit"].btn-success:hover, [type="reset"].btn-success:hover, [type="button"].btn-success:hover {
-    --btn-color: var(--cirrus-success-hover);
+    --btn-color:var(--cirrus-success-hover);
 }
 
 .btn.btn-success.outline:hover, button.btn-success.outline:hover, [type="submit"].btn-success.outline:hover, [type="reset"].btn-success.outline:hover, [type="button"].btn-success.outline:hover {
-    --btn-color: var(--cirrus-success);
+    --btn-color:var(--cirrus-success);
 }
 
 .btn.btn-warning, button.btn-warning, [type="submit"].btn-warning, [type="reset"].btn-warning, [type="button"].btn-warning {
-    --btn-color: var(--cirrus-warning);
-    --btn-fg: var(--cirrus-dark);
-    --btn-border-color: var(--cirrus-warning);
+    --btn-color:var(--cirrus-warning);
+    --btn-fg:var(--cirrus-dark);
+    --btn-border-color:var(--cirrus-warning);
 }
 
 .btn.btn-warning:focus, button.btn-warning:focus, [type="submit"].btn-warning:focus, [type="reset"].btn-warning:focus, [type="button"].btn-warning:focus {
@@ -277,17 +277,17 @@
 }
 
 .btn.btn-warning:hover, button.btn-warning:hover, [type="submit"].btn-warning:hover, [type="reset"].btn-warning:hover, [type="button"].btn-warning:hover {
-    --btn-color: var(--cirrus-warning-hover);
+    --btn-color:var(--cirrus-warning-hover);
 }
 
 .btn.btn-warning.outline:hover, button.btn-warning.outline:hover, [type="submit"].btn-warning.outline:hover, [type="reset"].btn-warning.outline:hover, [type="button"].btn-warning.outline:hover {
-    --btn-color: var(--cirrus-warning);
+    --btn-color:var(--cirrus-warning);
 }
 
 .btn.btn-danger, button.btn-danger, [type="submit"].btn-danger, [type="reset"].btn-danger, [type="button"].btn-danger {
-    --btn-color: var(--cirrus-danger);
-    --btn-fg: var(--cirrus-light);
-    --btn-border-color: var(--cirrus-danger);
+    --btn-color:var(--cirrus-danger);
+    --btn-fg:var(--cirrus-light);
+    --btn-border-color:var(--cirrus-danger);
 }
 
 .btn.btn-danger:focus, button.btn-danger:focus, [type="submit"].btn-danger:focus, [type="reset"].btn-danger:focus, [type="button"].btn-danger:focus {
@@ -295,11 +295,11 @@
 }
 
 .btn.btn-danger:hover, button.btn-danger:hover, [type="submit"].btn-danger:hover, [type="reset"].btn-danger:hover, [type="button"].btn-danger:hover {
-    --btn-color: var(--cirrus-danger-hover);
+    --btn-color:var(--cirrus-danger-hover);
 }
 
 .btn.btn-danger.outline:hover, button.btn-danger.outline:hover, [type="submit"].btn-danger.outline:hover, [type="reset"].btn-danger.outline:hover, [type="button"].btn-danger.outline:hover {
-    --btn-color: var(--cirrus-danger);
+    --btn-color:var(--cirrus-danger);
 }
 
 .btn.btn-xsmall, button.btn-xsmall, [type="submit"].btn-xsmall, [type="reset"].btn-xsmall, [type="button"].btn-xsmall {
@@ -354,36 +354,31 @@
     margin-left: 0.2rem;
 }
 
-[class^='btn-']:not(.btn-container):not(.btn-close),
-[class*=' btn-']:not(.btn-container):not(.btn-close) {
+[class^='btn-']:not(.btn-container):not(.btn-close), [class*=' btn-']:not(.btn-container):not(.btn-close) {
     background-color: var(--btn-color);
     border: 1px solid var(--btn-border-color);
     color: var(--btn-fg);
     transition: all var(--animation-duration);
 }
 
-[class^='btn-']:not(.btn-container):not(.btn-close):hover,
-[class*=' btn-']:not(.btn-container):not(.btn-close):hover {
+[class^='btn-']:not(.btn-container):not(.btn-close):hover, [class*=' btn-']:not(.btn-container):not(.btn-close):hover {
     background-color: var(--btn-color);
     border-color: var(--btn-border-color);
     transition: all var(--animation-duration);
 }
 
-[class^='btn-']:not(.btn-container):not(.btn-close).outline,
-[class*=' btn-']:not(.btn-container):not(.btn-close).outline {
+[class^='btn-']:not(.btn-container):not(.btn-close).outline, [class*=' btn-']:not(.btn-container):not(.btn-close).outline {
     background-color: transparent;
     color: var(--btn-color);
 }
 
-[class^='btn-']:not(.btn-container):not(.btn-close).outline:hover,
-[class*=' btn-']:not(.btn-container):not(.btn-close).outline:hover {
+[class^='btn-']:not(.btn-container):not(.btn-close).outline:hover, [class*=' btn-']:not(.btn-container):not(.btn-close).outline:hover {
     background-color: var(--btn-color);
     color: var(--btn-fg);
     transition: all var(--animation-duration);
 }
 
-[class^='btn-']:not(.btn-container):not(.btn-close).outline.btn-transparent,
-[class*=' btn-']:not(.btn-container):not(.btn-close).outline.btn-transparent {
+[class^='btn-']:not(.btn-container):not(.btn-close).outline.btn-transparent, [class*=' btn-']:not(.btn-container):not(.btn-close).outline.btn-transparent {
     color: #495057 !important;
 }
 
@@ -398,155 +393,63 @@
     display: inline-flex;
     display: -ms-inline-flexbox;
     display: -webkit-inline-flex;
-}
 
-.btn-group .btn {
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    margin: 0;
-}
+    .btn, button, [type="submit"] {
+        -ms-flex: 1 0 auto;
+        -webkit-box-flex: 1;
+        flex: 1 0 auto;
+        margin: 0;
 
-.btn-group .btn:first-child:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
+        &:first-child:not(:last-child) {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
 
-.btn-group .btn:last-child:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -1px;
-}
+        &:last-child:not(:first-child) {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            margin-left: -1px;
+        }
 
-.btn-group .btn:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    margin-left: -0.1rem;
-}
+        &:not(:first-child):not(:last-child) {
+            border-radius: 0;
+            margin-left: -0.1rem;
+        }
+    }
 
-.btn-group button {
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    margin: 0;
-}
+    &.btn-group-fill {
+        display: -webkit-box;
+        display: flex;
+        display: -ms-flexbox;
 
-.btn-group button:first-child:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.btn-group button:last-child:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -1px;
-}
-
-.btn-group button:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    margin-left: -0.1rem;
-}
-
-.btn-group [type="submit"] {
-    -ms-flex: 1 0 auto;
-    -webkit-box-flex: 1;
-    flex: 1 0 auto;
-    margin: 0;
-}
-
-.btn-group [type="submit"]:first-child:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.btn-group [type="submit"]:last-child:not(:first-child) {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    margin-left: -1px;
-}
-
-.btn-group [type="submit"]:not(:first-child):not(:last-child) {
-    border-radius: 0;
-    margin-left: -0.1rem;
-}
-
-.btn-group.btn-group-fill {
-    display: -webkit-box;
-    display: flex;
-    display: -ms-flexbox;
-}
-
-.btn-group.btn-group-fill .btn {
-    -ms-flex: 1 0;
-    -webkit-box-flex: 1;
-    flex: 1 0;
-}
-
-.btn-group.btn-group-fill button {
-    -ms-flex: 1 0;
-    -webkit-box-flex: 1;
-    flex: 1 0;
-}
-
-.btn-group.btn-group-fill [type="submit"] {
-    -ms-flex: 1 0;
-    -webkit-box-flex: 1;
-    flex: 1 0;
+        .btn, button, [type="submit"] {
+            -ms-flex: 1 0;
+            -webkit-box-flex: 1;
+            flex: 1 0;
+        }
+    }
 }
 
 @media screen and (max-width: 768px) {
     .btn-group {
         display: flex;
         flex-direction: column;
-    }
 
-    .btn-group .btn {
-        margin-bottom: -1px;
-    }
+        .btn, button, [type="submit"] {
+            margin-bottom: -1px;
 
-    .btn-group .btn:first-child:not(:last-child) {
-        border-radius: 0.25rem 0.25rem 0 0;
-    }
+            &:first-child:not(:last-child) {
+                border-radius: 0.25rem 0.25rem 0 0;
+            }
 
-    .btn-group .btn:not(:first-child):not(:last-child) {
-        margin-left: 0;
-    }
+            &:not(:first-child):not(:last-child) {
+                margin-left: 0;
+            }
 
-    .btn-group .btn:last-child:not(:first-child) {
-        border-radius: 0 0 0.25rem 0.25rem;
-        margin-left: 0;
-    }
-
-    .btn-group button {
-        margin-bottom: -1px;
-    }
-
-    .btn-group button:first-child:not(:last-child) {
-        border-radius: 0.25rem 0.25rem 0 0;
-    }
-
-    .btn-group button:not(:first-child):not(:last-child) {
-        margin-left: 0;
-    }
-
-    .btn-group button:last-child:not(:first-child) {
-        border-radius: 0 0 0.25rem 0.25rem;
-        margin-left: 0;
-    }
-
-    .btn-group [type="submit"] {
-        margin-bottom: -1px;
-    }
-
-    .btn-group [type="submit"]:first-child:not(:last-child) {
-        border-radius: 0.25rem 0.25rem 0 0;
-    }
-
-    .btn-group [type="submit"]:not(:first-child):not(:last-child) {
-        margin-left: 0;
-    }
-
-    .btn-group [type="submit"]:last-child:not(:first-child) {
-        border-radius: 0 0 0.25rem 0.25rem;
-        margin-left: 0;
+            &:last-child:not(:first-child) {
+                border-radius: 0 0 0.25rem 0.25rem;
+                margin-left: 0;
+            }
+        }
     }
 }
