@@ -1,0 +1,139 @@
+.u-static {
+    position: static !important;
+}
+
+.u-fixed {
+    position: fixed !important;
+}
+
+.u-absolute {
+    position: absolute !important;
+}
+
+.u-relative {
+    position: relative !important;
+}
+
+.u-sticky {
+    position: sticky !important;
+}
+
+@media screen and (min-width: 640px) {
+    .u-static-sm {
+        position: static !important;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .u-fixed-sm {
+        position: fixed !important;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .u-absolute-sm {
+        position: absolute !important;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .u-relative-sm {
+        position: relative !important;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .u-sticky-sm {
+        position: sticky !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .u-static-md {
+        position: static !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .u-fixed-md {
+        position: fixed !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .u-absolute-md {
+        position: absolute !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .u-relative-md {
+        position: relative !important;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .u-sticky-md {
+        position: sticky !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .u-static-lg {
+        position: static !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .u-fixed-lg {
+        position: fixed !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .u-absolute-lg {
+        position: absolute !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .u-relative-lg {
+        position: relative !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .u-sticky-lg {
+        position: sticky !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .u-static-xl {
+        position: static !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .u-fixed-xl {
+        position: fixed !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .u-absolute-xl {
+        position: absolute !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .u-relative-xl {
+        position: relative !important;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .u-sticky-xl {
+        position: sticky !important;
+    }
+}

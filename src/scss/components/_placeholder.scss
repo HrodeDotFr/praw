@@ -1,0 +1,26 @@
+.placeholder {
+    background-color: rgba(222, 226, 230, 0.5);
+    border-radius: 3px;
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #495057;
+    display: block;
+}
+
+.placeholder .placeholder-icon {
+    text-align: center;
+}
+
+.placeholder .placeholder-title,
+.placeholder .placeholder-subtitle {
+    margin: 1rem auto;
+}
+
+.placeholder .placeholder-subtitle {
+    opacity: 0.7;
+    margin: 0;
+}
+
+.placeholder .placeholder-commands {
+    margin-top: 1rem;
+}

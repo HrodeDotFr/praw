@@ -3,10 +3,10 @@ Framework front-end
 
 ### Installation
 ```sh
-npm i praw gulp gulp-rimraf node-sass gulp-sass gulp-babel @babel/core @babel/preset-env gulp-concat babel-preset-minify
+npm i praw gulp gulp-rimraf node-sass gulp-sass gulp-babel @babel/core @babel/preset-env gulp-concat babel-preset-minify gulp-strip-comments gulp-rename
 ```
 
-Exemple de config scss
+Exemple de config scss (dans src/scss/config)
 ```scss
 // === Couleurs === //
 $colors: (
@@ -46,6 +46,45 @@ $container-widths: (
 );
 ```
 
+Exemple de style scss (dans src/scss)
+```scss
+@import "config/praw.scss";
+
+@import "components/_reset.scss";
+@import "components/_animations.scss";
+@import "components/_avatars.scss";
+@import "components/_buttons.scss";
+@import "components/_cards.scss";
+@import "components/_clearfix.scss";
+@import "components/_code.scss";
+@import "components/_colors.scss";
+@import "components/_display.scss";
+@import "components/_flex.scss";
+@import "components/_font.scss";
+@import "components/_footer.scss";
+@import "components/_forms.scss";
+@import "components/_frames.scss";
+@import "components/_grid.scss";
+@import "components/_header.scss";
+@import "components/_layout.scss";
+@import "components/_links.scss";
+@import "components/_lists.scss";
+@import "components/_medias.scss";
+@import "components/_misc.scss";
+@import "components/_modals.scss";
+@import "components/_modifiers.scss";
+@import "components/_pagination.scss";
+@import "components/_placeholder.scss";
+@import "components/_position.scss";
+@import "components/_spacing.scss";
+@import "components/_tables.scss";
+@import "components/_tabs.scss";
+@import "components/_tags.scss";
+@import "components/_tiles.scss";
+@import "components/_toasts.scss";
+@import "components/_tooltips.scss";
+```
+
 Exemple de gulpfile
 ```javascript
 const gulp = require('gulp');
@@ -54,48 +93,44 @@ const sass = require('gulp-sass');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const gos = require('gulp-obfuscate-selectors');
+const strip = require('gulp-strip-comments');
+const rename = require('gulp-rename');
 
 function clean() {
     return gulp.src("dist/*", {read: false}).pipe(rimraf());
 }
 
 function styles() {
-    return gulp.src('src/scss/config.scss')
-            .pipe(gulp.src('node_modules/praw/src/scss/*.scss'))
-            .pipe(gulp.dest('node_modules/praw/src/scss'))
-            .pipe(concat('praw.scss'))
-            .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
-            .pipe(concat('praw.min.css'))
-            .pipe(gulp.dest('dist/css'));
+    return gulp.src('src/scss/style.scss')
+            .pipe(sass.sync({outputStyle: 'compressed', includePaths: ["./node_modules/praw/src/scss"]}).on('error', sass.logError))
+            .pipe(gulp.dest('dist/css'))
+            .pipe(concat('style.css'));
 }
 
-function scripts() {
+function prawScripts() {
     return gulp.src('node_modules/praw/src/js/**/*.js')
+            .pipe(strip())
             .pipe(babel({presets: ['minify']}))
             .pipe(concat('praw.min.js'))
             .pipe(gulp.dest('dist/js'));
 }
 
+function scripts() {
+    return gulp.src('src/js/*.js')
+            .pipe(strip())
+            .pipe(babel({presets: ['minify']}))
+            .pipe(rename({
+                suffix: '.min'
+            }))
+            .pipe(gulp.dest('dist/js'));
+}
+
 function views() {
-    return gulp.src(['dist/**/*.css', 'src/**/*.html', 'dist/**/*.js'])
+    return gulp.src(['src/**/*.html', 'dist/**/*.css', 'dist/**/*.js'])
             .pipe(gos.run())
             .pipe(gulp.dest('dist'));
 }
-
-function fonts() {
-    return gulp.src('node_modules/praw/src/fonts/*')
-            .pipe(gulp.dest('dist/fonts'));
-}
-
-var build = gulp.series(clean, gulp.parallel(fonts, gulp.series(style, scripts, views)));
-
-exports.clean = clean;
-exports.styles = styles;
-exports.scripts = scripts;
-exports.fonts = fonts;
-exports.build = build;
-
-exports.default = build;
+exports.default = gulp.series(clean, style, prawScripts, scripts, views);
 ```
 
 ### Documentation
@@ -107,11 +142,9 @@ exports.default = build;
 | express | Infrastructure Web minimaliste, souple et rapide |
 | acl | Module de liste de contrôle d'accès, basé sur Redis avec prise en charge du middleware Express |
 | forms | Moyen simple de créer, analyser et valider des formulaires |
-| crypto (intégré à nodejs) | Moyen de gérer les données chiffrées |
 | morgan | Middleware de journalisation des requêtes HTTP |
 | express-fileupload | Middleware express pour l'upload de fichiers |
 | lodash | Bibliothèque d'utilitaires JS |
 | sequelize | ORM |
 | express-session | Middleware de session pour Express |
 | nodemailer | Envoi d'emails |
-| ejs | Moteur de template |
