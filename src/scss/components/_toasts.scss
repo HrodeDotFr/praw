@@ -2,88 +2,85 @@
     display: block;
     width: 100%;
     padding: 0.75rem 1.25rem;
-    background-color: var(--toast-primary-bg);
-    border: 1px solid var(--toast-primary-bg);
+    background-color: rgba(49, 59, 80, 0.9);
+    border: 1px solid rgba(49, 59, 80, 0.9);
     border-radius: 2px;
     color: #fff;
     position: relative;
     margin: 0.5rem;
-}
 
-.toast.toast--translucent {
-    opacity: 0.5;
-}
+    &.toast--translucent {
+        opacity: 0.5;
 
-.toast.toast--translucent:hover {
-    opacity: 1;
-}
+        &:hover {
+            opacity: 1;
+        }
+    }
 
-.toast p {
-    margin: 0;
-}
+    p {
+        margin: 0;
+    }
 
-.toast a {
-    color: var(--cirrus-light);
-    transition: all 0.3s;
-}
+    a {
+        color: map-get($colors, "light");
+        transition: all 0.3s;
 
-.toast a:hover {
-    opacity: 0.8;
-    transition: all 0.3s;
-}
+        &:hover {
+            opacity: 0.8;
+            transition: all 0.3s;
+        }
+    }
 
-.toast .toast__title {
-    margin: 0;
-    margin-top: 1rem;
-}
+    .toast__title {
+        margin: 0;
+        margin-top: 1rem;
+    }
 
-.toast .btn-close {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-}
+    .btn-close {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
 
-.toast.toast--primary {
-    background-color: var(--cirrus-primary);
-    border-color: var(--cirrus-primary);
-}
+    &.toast--primary {
+        background-color: map-get($colors, "primary");
+        border-color: map-get($colors, "primary");
+        background-color: #f03d4d;
+        border-color: #f03d4d;
+    }
 
-.toast.toast--primary {
-    background-color: #f03d4d;
-    border-color: #f03d4d;
-}
+    &.toast--gray {
+        background-color: #d5d7dc;
+        border-color: #d5d7dc;
+    }
 
-.toast.toast--gray {
-    background-color: #d5d7dc;
-    border-color: #d5d7dc;
-}
+    &.toast--dark {
+        background-color: #363636;
+        border-color: #363636;
+    }
 
-.toast.toast--dark {
-    background-color: #363636;
-    border-color: #363636;
-}
+    &.toast--link {
+        background-color: #5e5cc7;
+        border-color: #5e5cc7;
+    }
 
-.toast.toast--link {
-    background-color: #5e5cc7;
-    border-color: #5e5cc7;
-}
+    &.toast--info {
+        background-color: #2972fa;
+        border-color: #2972fa;
+    }
 
-.toast.toast--info {
-    background-color: #2972fa;
-    border-color: #2972fa;
-}
+    &.toast--success {
+        background-color: #0dd157;
+        border-color: #0dd157;
+    }
 
-.toast.toast--success {
-    background-color: #0dd157;
-    border-color: #0dd157;
-}
+    &.toast--warning {
+        background-color: #fab633;
+        border-color: #fab633;
+    }
 
-.toast.toast--warning {
-    background-color: #fab633;
-    border-color: #fab633;
-}
-
-.toast.toast--danger {
-    background-color: #fb4143;
-    border-color: #fb4143;
+    &.toast--danger {
+        background-color: #fb4143;
+        border-color: #fb4143;
+    }
 }

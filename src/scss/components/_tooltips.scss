@@ -2,137 +2,151 @@
     position: relative;
     overflow: visible;
     white-space: nowrap;
-}
 
-.tooltip::after {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    position: absolute;
-    color: #fff;
-    font-size: 0.6rem;
-    background-color: rgba(69, 77, 93, 0.9);
-    content: attr(data-tooltip);
-    display: block;
-    line-height: 1rem;
-    text-transform: none;
-    overflow: hidden;
-    padding: 0.4rem 0.8rem;
-    opacity: 0;
-    text-overflow: ellipsis;
-    max-width: 15rem;
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-    transition: all var(--animation-duration) ease;
-    z-index: 200;
-    pointer-events: none;
-    bottom: 100%;
-    left: 50%;
-    border-radius: 0.2rem;
-}
+    &::after {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: absolute;
+        color: #fff;
+        font-size: 0.6rem;
+        background-color: rgba(69, 77, 93, 0.9);
+        content: attr(data-tooltip);
+        display: block;
+        line-height: 1rem;
+        text-transform: none;
+        overflow: hidden;
+        padding: 0.4rem 0.8rem;
+        opacity: 0;
+        text-overflow: ellipsis;
+        max-width: 15rem;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+        transition: all 0.2s ease;
+        z-index: 200;
+        pointer-events: none;
+        bottom: 100%;
+        left: 50%;
+        border-radius: 0.2rem;
+    }
 
-.tooltip:focus::after, .tooltip:hover::after {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -0.5rem);
-    transform: translate(-50%, -0.5rem);
-    transition: all var(--animation-duration) ease;
-}
+    &:focus::after, &:hover::after {
+        opacity: 1;
+        -webkit-transform: translate(-50%, -0.5rem);
+        transform: translate(-50%, -0.5rem);
+        transition: all 0.2s ease;
+    }
 
-.tooltip.tooltip--top-left::after {
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-}
+    &.tooltip--top-left {
+        &::after {
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+        }
 
-.tooltip.tooltip--top-left:hover::after, .tooltip.tooltip--top-left:focus::after {
-    left: 0;
-    -webkit-transform: translate(-100%, -0.5rem);
-    transform: translate(-100%, -0.5rem);
-}
+        &:hover::after, &:focus::after {
+            left: 0;
+            -webkit-transform: translate(-100%, -0.5rem);
+            transform: translate(-100%, -0.5rem);
+        }
+    }
 
-.tooltip.tooltip--top-right::after {
-    left: auto;
-    -webkit-transform: translate(15%, 0);
-    transform: translate(15%, 0);
-}
+    &.tooltip--top-right {
+        &::after {
+            left: auto;
+            -webkit-transform: translate(15%, 0);
+            transform: translate(15%, 0);
+        }
 
-.tooltip.tooltip--top-right:hover::after, .tooltip.tooltip--top-right:focus::after {
-    right: 0;
-    -webkit-transform: translate(100%, -0.5rem);
-    transform: translate(100%, -0.5rem);
-}
+        &:hover::after, &:focus::after {
+            right: 0;
+            -webkit-transform: translate(100%, -0.5rem);
+            transform: translate(100%, -0.5rem);
+        }
+    }
 
-.tooltip.tooltip--bottom::after {
-    top: 100%;
-    transform: translate(-50%, -1rem);
-    -webkit-transform: translate(-50%, -1rem);
-    -moz-transform: translate(-50%, -1rem);
-    -ms-transform: translate(-50%, -1rem);
-    bottom: auto;
-}
+    &.tooltip--bottom {
+        &::after {
+            top: 100%;
+            transform: translate(-50%, -1rem);
+            -webkit-transform: translate(-50%, -1rem);
+            -moz-transform: translate(-50%, -1rem);
+            -ms-transform: translate(-50%, -1rem);
+            bottom: auto;
+        }
 
-.tooltip.tooltip--bottom:hover::after, .tooltip.tooltip--bottom:focus::after {
-    transform: translate(-50%, 0.5rem);
-    -webkit-transform: translate(-50%, 0.5rem);
-    -moz-transform: translate(-50%, 0.5rem);
-    -ms-transform: translate(-50%, 0.5rem);
-    bottom: auto;
-}
+        &:hover::after, &:focus::after {
+            transform: translate(-50%, 0.5rem);
+            -webkit-transform: translate(-50%, 0.5rem);
+            -moz-transform: translate(-50%, 0.5rem);
+            -ms-transform: translate(-50%, 0.5rem);
+            bottom: auto;
+        }
+    }
 
-.tooltip.tooltip--bottom-left::after {
-    top: 100%;
-    -webkit-transform: translate(-65%, -1rem);
-    transform: translate(-65%, -1rem);
-    bottom: auto;
-}
+    &.tooltip--bottom-left {
+        &::after {
+            top: 100%;
+            -webkit-transform: translate(-65%, -1rem);
+            transform: translate(-65%, -1rem);
+            bottom: auto;
+        }
 
-.tooltip.tooltip--bottom-left:hover::after, .tooltip.tooltip--bottom-left:focus::after {
-    left: 0;
-    -webkit-transform: translate(-100%, 0.5rem);
-    transform: translate(-100%, 0.5rem);
-}
+        &:hover::after, &:focus::after {
+            left: 0;
+            -webkit-transform: translate(-100%, 0.5rem);
+            transform: translate(-100%, 0.5rem);
+        }
+    }
 
-.tooltip.tooltip--bottom-right::after {
-    left: auto;
-    top: 100%;
-    -webkit-transform: translate(0%, -1rem);
-    transform: translate(0%, -1rem);
-    bottom: auto;
-}
+    &.tooltip--bottom-right {
+        &::after {
+            left: auto;
+            top: 100%;
+            -webkit-transform: translate(0%, -1rem);
+            transform: translate(0%, -1rem);
+            bottom: auto;
+        }
 
-.tooltip.tooltip--bottom-right:hover::after, .tooltip.tooltip--bottom-right:focus::after {
-    right: 0;
-    -webkit-transform: translate(100%, 0.5rem);
-    transform: translate(100%, 0.5rem);
-}
+        &:hover::after, &:focus::after {
+            right: 0;
+            -webkit-transform: translate(100%, 0.5rem);
+            transform: translate(100%, 0.5rem);
+        }
+    }
 
-.tooltip.tooltip--right::after {
-    left: 100%;
-    bottom: 50%;
-    transform: translate(-1rem, 50%);
-    -webkit-transform: translate(-1rem, 50%);
-    -moz-transform: translate(-1rem, 50%);
-    -ms-transform: translate(-1rem, 50%);
-}
+    &.tooltip--right {
+        &::after {
+            left: 100%;
+            bottom: 50%;
+            transform: translate(-1rem, 50%);
+            -webkit-transform: translate(-1rem, 50%);
+            -moz-transform: translate(-1rem, 50%);
+            -ms-transform: translate(-1rem, 50%);
+        }
 
-.tooltip.tooltip--right:hover::after, .tooltip.tooltip--right:focus::after {
-    transform: translate(0.5rem, 50%);
-    -webkit-transform: translate(0.5rem, 50%);
-    -moz-transform: translate(0.5rem, 50%);
-    -ms-transform: translate(0.5rem, 50%);
-}
+        &:hover::after, &:focus::after {
+            transform: translate(0.5rem, 50%);
+            -webkit-transform: translate(0.5rem, 50%);
+            -moz-transform: translate(0.5rem, 50%);
+            -ms-transform: translate(0.5rem, 50%);
+        }
+    }
 
-.tooltip.tooltip--left::after {
-    right: 100%;
-    bottom: 50%;
-    left: auto;
-    transform: translate(1rem, 50%);
-    -webkit-transform: translate(1rem, 50%);
-    -moz-transform: translate(1rem, 50%);
-    -ms-transform: translate(1rem, 50%);
-}
+    &.tooltip--left {
+        &::after {
+            right: 100%;
+            bottom: 50%;
+            left: auto;
+            transform: translate(1rem, 50%);
+            -webkit-transform: translate(1rem, 50%);
+            -moz-transform: translate(1rem, 50%);
+            -ms-transform: translate(1rem, 50%);
+        }
 
-.tooltip.tooltip--left:hover::after, .tooltip.tooltip--left:focus::after {
-    transform: translate(-0.5rem, 50%);
-    -webkit-transform: translate(-0.5rem, 50%);
-    -moz-transform: translate(-0.5rem, 50%);
-    -ms-transform: translate(-0.5rem, 50%);
+        &:hover::after, &:focus::after {
+            transform: translate(-0.5rem, 50%);
+            -webkit-transform: translate(-0.5rem, 50%);
+            -moz-transform: translate(-0.5rem, 50%);
+            -ms-transform: translate(-0.5rem, 50%);
+        }
+    }
 }
