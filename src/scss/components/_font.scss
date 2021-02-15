@@ -74,7 +74,7 @@ blockquote {
     padding: 1rem 2rem;
 }
 
-blockquote.text--large {
+blockquote.text-large {
     font-size: 1.15rem;
 }
 
@@ -234,7 +234,7 @@ mark,
 
 .info {
     display: block;
-    font-size: var(--font-size-s);
+    font-size: 0.85rem;
     margin-top: 0.25rem;
     color: #868e96;
 }
@@ -263,7 +263,7 @@ abbr[title] {
 }
 
 kbd {
-    background-color: var(--cirrus-fg);
+    background-color: map-get($colors, "dark");
     border-radius: 0.2rem;
     color: #fff;
     display: inline-block;

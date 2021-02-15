@@ -21,7 +21,7 @@
         max-width: 15rem;
         -webkit-transform: translate(-50%, 0);
         transform: translate(-50%, 0);
-        transition: all var(--animation-duration) ease;
+        transition: all 0.2s ease;
         z-index: 200;
         pointer-events: none;
         bottom: 100%;
@@ -33,10 +33,10 @@
         opacity: 1;
         -webkit-transform: translate(-50%, -0.5rem);
         transform: translate(-50%, -0.5rem);
-        transition: all var(--animation-duration) ease;
+        transition: all 0.2s ease;
     }
 
-    &.tooltip--top-left {
+    &.tooltip-top-left {
         &::after {
             -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
@@ -49,7 +49,7 @@
         }
     }
 
-    &.tooltip--top-right {
+    &.tooltip-top-right {
         &::after {
             left: auto;
             -webkit-transform: translate(15%, 0);
@@ -63,7 +63,7 @@
         }
     }
 
-    &.tooltip--bottom {
+    &.tooltip-bottom {
         &::after {
             top: 100%;
             transform: translate(-50%, -1rem);
@@ -82,7 +82,7 @@
         }
     }
 
-    &.tooltip--bottom-left {
+    &.tooltip-bottom-left {
         &::after {
             top: 100%;
             -webkit-transform: translate(-65%, -1rem);
@@ -97,7 +97,7 @@
         }
     }
 
-    &.tooltip--bottom-right {
+    &.tooltip-bottom-right {
         &::after {
             left: auto;
             top: 100%;
@@ -113,7 +113,7 @@
         }
     }
 
-    &.tooltip--right {
+    &.tooltip-right {
         &::after {
             left: 100%;
             bottom: 50%;
@@ -131,7 +131,7 @@
         }
     }
 
-    &.tooltip--left {
+    &.tooltip-left {
         &::after {
             right: 100%;
             bottom: 50%;

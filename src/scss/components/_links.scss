@@ -1,13 +1,7 @@
 a {
-    color: var(--cirrus-link);
     font-weight: 600;
     padding: 2px;
     text-decoration: none;
-    transition: all 0.3s;
-}
-
-a:hover {
-    color: var(--cirrus-link-dark);
     transition: all 0.3s;
 }
 

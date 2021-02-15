@@ -34,7 +34,7 @@ $colors: (
 );
 
 // === Margins et paddings === //
-$spacing:1rem;
+$margins-paddings-size:1rem;
 
 // === Grille === //
 $container-widths: (
@@ -44,22 +44,12 @@ $container-widths: (
 "l": 996px,
 "xl": 1200px
 );
-
-@each $name, $color in $colors {
-    $colors: map-merge($colors, (
-        "#{$name}-darken":darken($color, 15%),
-        "#{$name}-lighten":lighten($color, 15%),
-        ));
-}
-
-$colors: map-merge($colors, (
-"transparent":transparent
-));
 ```
 
 Exemple de style scss (dans src/scss)
 ```scss
 @import "config/praw.scss";
+@import "_praw.scss";
 
 @import "components/_reset.scss";
 @import "components/_animations.scss";

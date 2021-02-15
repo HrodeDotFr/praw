@@ -3,7 +3,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type=
     border: 1px solid #dee2e6;
     border-radius: 3px;
     font-family: 'Nunito Sans';
-    font-size: var(--font-size-m);
+    font-size: 1rem;
     letter-spacing: 0.02rem;
     transition: all 0.3s;
     outline: none;
@@ -13,53 +13,53 @@ input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type=
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']) {
     &.input-xsmall, select.input-xsmall {
-        font-size: var(--font-size-xs);
+        font-size: 0.7rem;
         padding: 0.35rem 0.9rem;
     }
 }
 
 select {
     &.input-xsmall, select.input-xsmall {
-        font-size: var(--font-size-xs);
+        font-size: 0.7rem;
         padding: 0.35rem 0.9rem;
     }
 }
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']) {
     &.input-small, select.input-small {
-        font-size: var(--font-size-s);
+        font-size: 0.85rem;
         padding: 0.55rem 1rem;
     }
 }
 
 select {
     &.input-small, select.input-small {
-        font-size: var(--font-size-s);
+        font-size: 0.85rem;
         padding: 0.55rem 1rem;
     }
 }
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']) {
     &.input-large, select.input-large {
-        font-size: var(--font-size-l);
+        font-size: 1.35rem;
     }
 }
 
 select {
     &.input-large, select.input-large {
-        font-size: var(--font-size-l);
+        font-size: 1.35rem;
     }
 }
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']) {
     &.input-xlarge, select.input-xlarge {
-        font-size: var(--font-size-xl);
+        font-size: 1.75rem;
     }
 }
 
 select {
     &.input-xlarge, select.input-xlarge {
-        font-size: var(--font-size-xl);
+        font-size: 1.75rem;
     }
 }
 
@@ -221,7 +221,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type=
 }
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-success, select.input-success {
-    border-color: var(--cirrus-success);
+    border-color: map-get($colors, "conf");
     background-color: rgba(0, 224, 0, 0.05) !important;
 }
 
@@ -230,7 +230,7 @@ input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type=
 }
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-error, select.input-error {
-    border-color: var(--cirrus-danger);
+    border-color: map-get($colors, "err");
     background-color: rgba(244, 67, 54, 0.05) !important;
 }
 
@@ -243,7 +243,7 @@ textarea {
     border: 1px solid #dee2e6;
     border-radius: 3px;
     font-family: 'Nunito Sans';
-    font-size: var(--font-size-m);
+    font-size: 1rem;
     letter-spacing: 0.02rem;
     transition: all 0.3s;
     outline: none;
@@ -260,7 +260,7 @@ textarea {
         border: 1px solid #dee2e6;
         border-radius: 3px;
         font-family: 'Nunito Sans';
-        font-size: var(--font-size-m);
+        font-size: 1rem;
         letter-spacing: 0.02rem;
         transition: all 0.3s;
         outline: none;
@@ -274,46 +274,46 @@ textarea {
     }
 
     &.input-xsmall, select.input-xsmall {
-        font-size: var(--font-size-xs);
+        font-size: 0.7rem;
         padding: 0.35rem 0.9rem;
     }
 
     &[type='text'] {
         &.input-xsmall, select.input-xsmall {
-            font-size: var(--font-size-xs);
+            font-size: 0.7rem;
             padding: 0.35rem 0.9rem;
         }
     }
 
     &.input-small, select.input-small {
-        font-size: var(--font-size-s);
+        font-size: 0.85rem;
         padding: 0.55rem 1rem;
     }
 
     &[type='text'] {
         &.input-small, select.input-small {
-            font-size: var(--font-size-s);
+            font-size: 0.85rem;
             padding: 0.55rem 1rem;
         }
     }
 
     &.input-large, select.input-large {
-        font-size: var(--font-size-l);
+        font-size: 1.35rem;
     }
 
     &[type='text'] {
         &.input-large, select.input-large {
-            font-size: var(--font-size-l);
+            font-size: 1.35rem;
         }
     }
 
     &.input-xlarge, select.input-xlarge {
-        font-size: var(--font-size-xl);
+        font-size: 1.75rem;
     }
 
     &[type='text'] {
         &.input-xlarge, select.input-xlarge {
-            font-size: var(--font-size-xl);
+            font-size: 1.75rem;
         }
     }
 
@@ -444,19 +444,19 @@ input[type='text'].input-focused, .input-focused {
 }
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']):focus.input-success, select:focus.input-success {
-    border-color: var(--cirrus-success);
+    border-color: map-get($colors, "conf");
     background-color: rgba(0, 224, 0, 0.05) !important;
 }
 
 textarea {
     &:focus.input-success, &[type='text']:focus.input-success {
-        border-color: var(--cirrus-success);
+        border-color: map-get($colors, "conf");
         background-color: rgba(0, 224, 0, 0.05) !important;
     }
 }
 
 input[type='text'].input-focused.input-success, .input-focused.input-success {
-    border-color: var(--cirrus-success);
+    border-color: map-get($colors, "conf");
     background-color: rgba(0, 224, 0, 0.05) !important;
 }
 
@@ -475,19 +475,19 @@ input[type='text'].input-focused.input-success:focus, .input-focused.input-succe
 }
 
 input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']):focus.input-error, select:focus.input-error {
-    border-color: var(--cirrus-danger);
+    border-color: map-get($colors, "err");
     background-color: rgba(244, 67, 54, 0.05) !important;
 }
 
 textarea {
     &:focus.input-error, &[type='text']:focus.input-error {
-        border-color: var(--cirrus-danger);
+        border-color: map-get($colors, "err");
         background-color: rgba(244, 67, 54, 0.05) !important;
     }
 }
 
 input[type='text'].input-focused.input-error, .input-focused.input-error {
-    border-color: var(--cirrus-danger);
+    border-color: map-get($colors, "err");
     background-color: rgba(244, 67, 54, 0.05) !important;
 }
 
@@ -510,7 +510,7 @@ select {
     border: 1px solid #dee2e6;
     border-radius: 3px;
     font-family: 'Nunito Sans';
-    font-size: var(--font-size-m);
+    font-size: 1rem;
     letter-spacing: 0.02rem;
     transition: all 0.3s;
     outline: none;
@@ -520,21 +520,21 @@ select {
     border: 1px solid #ddd;
 
     &.input-xsmall, select.input-xsmall {
-        font-size: var(--font-size-xs);
+        font-size: 0.7rem;
         padding: 0.35rem 0.9rem;
     }
 
     &.input-small, select.input-small {
-        font-size: var(--font-size-s);
+        font-size: 0.85rem;
         padding: 0.55rem 1rem;
     }
 
     &.input-large, select.input-large {
-        font-size: var(--font-size-l);
+        font-size: 1.35rem;
     }
 
     &.input-xlarge, select.input-xlarge {
-        font-size: var(--font-size-xl);
+        font-size: 1.75rem;
     }
 
     &.input-contains-icon, &.input-contains-icon-left {
@@ -723,10 +723,10 @@ label {
     }
 
     .form-group-label {
-        background-color: var(--cirrus-form-group-bg);
+        background-color: #f8f9fa;
         border: 1px solid #dee2e6;
         border-radius: 0.2rem;
-        color: var(--cirrus-form-group-fg);
+        color: #909090;
         margin: 0;
         padding: 0.8rem;
         user-select: none;
@@ -830,7 +830,7 @@ label {
             background-color: map-get($colors, "primary");
         }
 
-        &.form-ext-input--primary {
+        &.form-ext-input-primary {
             &:checked ~ .form-ext-label {
                 color: map-get($colors, "primary");
 
@@ -845,12 +845,12 @@ label {
             }
         }
 
-        &.form-ext-input--gray {
+        &.form-ext-input-gray {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-gray);
+                color: map-get($colors, "grey");
 
                 &:before {
-                    background-color: var(--cirrus-gray);
+                    background-color: map-get($colors, "grey");
                 }
             }
 
@@ -860,12 +860,12 @@ label {
             }
         }
 
-        &.form-ext-input--dark {
+        &.form-ext-input-dark {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-dark);
+                color: map-get($colors, "dark");
 
                 &:before {
-                    background-color: var(--cirrus-dark);
+                    background-color: map-get($colors, "dark");
                 }
             }
 
@@ -875,12 +875,12 @@ label {
             }
         }
 
-        &.form-ext-input--link {
+        &.form-ext-input-link {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-link);
+                color: #5e5cc7;
 
                 &:before {
-                    background-color: var(--cirrus-link);
+                    background-color: #5e5cc7;
                 }
             }
 
@@ -890,12 +890,12 @@ label {
             }
         }
 
-        &.form-ext-input--info {
+        &.form-ext-input-info {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-info);
+                color: map-get($colors, "info");
 
                 &:before {
-                    background-color: var(--cirrus-info);
+                    background-color: map-get($colors, "info");
                 }
             }
 
@@ -905,12 +905,12 @@ label {
             }
         }
 
-        &.form-ext-input--success {
+        &.form-ext-input-success {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-success);
+                color: map-get($colors, "conf");
 
                 &:before {
-                    background-color: var(--cirrus-success);
+                    background-color: map-get($colors, "conf");
                 }
             }
 
@@ -920,12 +920,12 @@ label {
             }
         }
 
-        &.form-ext-input--warning {
+        &.form-ext-input-warning {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-warning);
+                color: map-get($colors, "warn");
 
                 &:before {
-                    background-color: var(--cirrus-warning);
+                    background-color: map-get($colors, "warn");
                 }
             }
 
@@ -935,12 +935,12 @@ label {
             }
         }
 
-        &.form-ext-input--danger {
+        &.form-ext-input-danger {
             &:checked ~ .form-ext-label {
-                color: var(--cirrus-danger);
+                color: map-get($colors, "err");
 
                 &:before {
-                    background-color: var(--cirrus-danger);
+                    background-color: map-get($colors, "err");
                 }
             }
 
@@ -950,12 +950,12 @@ label {
             }
         }
 
-        &:disabled ~ .form-ext-toggle__toggler {
+        &:disabled ~ .form-ext-toggle-toggler {
             opacity: 0.5;
         }
     }
 
-    .form-ext-toggle__label {
+    .form-ext-toggle-label {
         align-items: center;
         display: flex;
         justify-content: space-between;
@@ -973,10 +973,10 @@ label {
             }
         }
 
-        .form-ext-toggle__toggler {
-            border: 1px solid var(--cirrus-gray);
+        .form-ext-toggle-toggler {
+            border: 1px solid map-get($colors, "grey");
             border-radius: 6.25rem;
-            color: var(--cirrus-gray);
+            color: map-get($colors, "grey");
             display: block;
             font-size: 9px;
             height: 1.5rem;
@@ -990,7 +990,7 @@ label {
 
         input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
                     background-color: map-get($colors, "primary");
                     border-color: map-get($colors, "primary");
                     color: #fff;
@@ -1000,7 +1000,7 @@ label {
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
                     background-color: map-get($colors, "primary");
                     border-color: map-get($colors, "primary");
                     color: #fff;
@@ -1010,21 +1010,21 @@ label {
             }
 
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler i::after, * .form-ext-toggle__toggler i::after {
+                .form-ext-toggle-toggler i::after, * .form-ext-toggle-toggler i::after {
                     background-color: #fff;
                     left: calc(100% - 20px);
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler i::after, * .form-ext-toggle__toggler i::after {
+                .form-ext-toggle-toggler i::after, * .form-ext-toggle-toggler i::after {
                     background-color: #fff;
                     left: calc(100% - 20px);
                 }
             }
 
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler i::before, * .form-ext-toggle__toggler i::before {
+                .form-ext-toggle-toggler i::before, * .form-ext-toggle-toggler i::before {
                     color: #fff;
                     content: attr(data-check-icon);
                     text-align: left;
@@ -1032,7 +1032,7 @@ label {
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler i::before, * .form-ext-toggle__toggler i::before {
+                .form-ext-toggle-toggler i::before, * .form-ext-toggle-toggler i::before {
                     color: #fff;
                     content: attr(data-check-icon);
                     text-align: left;
@@ -1040,23 +1040,23 @@ label {
             }
         }
 
-        &.form-ext-toggle--primary input {
+        &.form-ext-toggle-primary input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
                     background-color: map-get($colors, "primary");
                     border-color: map-get($colors, "primary");
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
                     background-color: map-get($colors, "primary");
                     border-color: map-get($colors, "primary");
                 }
             }
         }
 
-        .form-ext-toggle--primary .form-ext-toggle__toggler {
+        .form-ext-toggle-primary .form-ext-toggle-toggler {
             border-color: map-get($colors, "primary");
             color: map-get($colors, "primary");
 
@@ -1066,261 +1066,261 @@ label {
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--primary .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-primary .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        &.form-ext-toggle--gray input {
+        &.form-ext-toggle-gray input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-gray);
-                    border-color: var(--cirrus-gray);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "grey");
+                    border-color: map-get($colors, "grey");
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-gray);
-                    border-color: var(--cirrus-gray);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "grey");
+                    border-color: map-get($colors, "grey");
                 }
             }
         }
 
-        .form-ext-toggle--gray .form-ext-toggle__toggler {
-            border-color: var(--cirrus-gray);
-            color: var(--cirrus-gray);
+        .form-ext-toggle-gray .form-ext-toggle-toggler {
+            border-color: map-get($colors, "grey");
+            color: map-get($colors, "grey");
 
             i::after {
-                background-color: var(--cirrus-gray);
+                background-color: map-get($colors, "grey");
             }
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--gray .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-gray .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        &.form-ext-toggle--dark input {
+        &.form-ext-toggle-dark input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-dark);
-                    border-color: var(--cirrus-dark);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "dark");
+                    border-color: map-get($colors, "dark");
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-dark);
-                    border-color: var(--cirrus-dark);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "dark");
+                    border-color: map-get($colors, "dark");
                 }
             }
         }
 
-        .form-ext-toggle--dark .form-ext-toggle__toggler {
-            border-color: var(--cirrus-dark);
-            color: var(--cirrus-dark);
+        .form-ext-toggle-dark .form-ext-toggle-toggler {
+            border-color: map-get($colors, "dark");
+            color: map-get($colors, "dark");
 
             i::after {
-                background-color: var(--cirrus-dark);
+                background-color: map-get($colors, "dark");
             }
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--dark .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-dark .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        &.form-ext-toggle--link input {
+        &.form-ext-toggle-link input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-link);
-                    border-color: var(--cirrus-link);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: #5e5cc7;
+                    border-color: #5e5cc7;
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-link);
-                    border-color: var(--cirrus-link);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: #5e5cc7;
+                    border-color: #5e5cc7;
                 }
             }
         }
 
-        .form-ext-toggle--link .form-ext-toggle__toggler {
-            border-color: var(--cirrus-link);
-            color: var(--cirrus-link);
+        .form-ext-toggle-link .form-ext-toggle-toggler {
+            border-color: #5e5cc7;
+            color: #5e5cc7;
 
             i::after {
-                background-color: var(--cirrus-link);
+                background-color: #5e5cc7;
             }
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--link .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-link .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        &.form-ext-toggle--info input {
+        &.form-ext-toggle-info input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-info);
-                    border-color: var(--cirrus-info);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "info");
+                    border-color: map-get($colors, "info");
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-info);
-                    border-color: var(--cirrus-info);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "info");
+                    border-color: map-get($colors, "info");
                 }
             }
         }
 
-        .form-ext-toggle--info .form-ext-toggle__toggler {
-            border-color: var(--cirrus-info);
-            color: var(--cirrus-info);
+        .form-ext-toggle-info .form-ext-toggle-toggler {
+            border-color: map-get($colors, "info");
+            color: map-get($colors, "info");
 
             i::after {
-                background-color: var(--cirrus-info);
+                background-color: map-get($colors, "info");
             }
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--info .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-info .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        &.form-ext-toggle--success input {
+        &.form-ext-toggle-success input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-success);
-                    border-color: var(--cirrus-success);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "conf");
+                    border-color: map-get($colors, "conf");
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-success);
-                    border-color: var(--cirrus-success);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "conf");
+                    border-color: map-get($colors, "conf");
                 }
             }
         }
 
-        .form-ext-toggle--success .form-ext-toggle__toggler {
-            border-color: var(--cirrus-success);
-            color: var(--cirrus-success);
+        .form-ext-toggle-success .form-ext-toggle-toggler {
+            border-color: map-get($colors, "conf");
+            color: map-get($colors, "conf");
 
             i::after {
-                background-color: var(--cirrus-success);
+                background-color: map-get($colors, "conf");
             }
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--success .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-success .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        &.form-ext-toggle--warning input {
+        &.form-ext-toggle-warning input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-warning);
-                    border-color: var(--cirrus-warning);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "warn");
+                    border-color: map-get($colors, "warn");
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-warning);
-                    border-color: var(--cirrus-warning);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "warn");
+                    border-color: map-get($colors, "warn");
                 }
             }
         }
 
-        .form-ext-toggle--warning .form-ext-toggle__toggler {
-            border-color: var(--cirrus-warning);
-            color: var(--cirrus-warning);
+        .form-ext-toggle-warning .form-ext-toggle-toggler {
+            border-color: map-get($colors, "warn");
+            color: map-get($colors, "warn");
 
             i::after {
-                background-color: var(--cirrus-warning);
+                background-color: map-get($colors, "warn");
             }
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--warning .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-warning .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        &.form-ext-toggle--danger input {
+        &.form-ext-toggle-danger input {
             &[type='checkbox']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-danger);
-                    border-color: var(--cirrus-danger);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "err");
+                    border-color: map-get($colors, "err");
                 }
             }
 
             &[type='radio']:checked + {
-                .form-ext-toggle__toggler, * .form-ext-toggle__toggler {
-                    background-color: var(--cirrus-danger);
-                    border-color: var(--cirrus-danger);
+                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                    background-color: map-get($colors, "err");
+                    border-color: map-get($colors, "err");
                 }
             }
         }
 
-        .form-ext-toggle--danger .form-ext-toggle__toggler {
-            border-color: var(--cirrus-danger);
-            color: var(--cirrus-danger);
+        .form-ext-toggle-danger .form-ext-toggle-toggler {
+            border-color: map-get($colors, "err");
+            color: map-get($colors, "err");
 
             i::after {
-                background-color: var(--cirrus-danger);
+                background-color: map-get($colors, "err");
             }
         }
 
         .form-ext-input:focus {
-            + .form-ext-toggle__toggler, ~ .form-ext-label:before {
+            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
                 box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
-        &.form-ext-toggle--danger .form-ext-input:focus + .form-ext-toggle__toggler {
+        &.form-ext-toggle-danger .form-ext-input:focus + .form-ext-toggle-toggler {
             box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
-        .form-ext-toggle__toggler i {
+        .form-ext-toggle-toggler i {
             &::before, &::after {
                 content: '';
                 display: block;
@@ -1338,13 +1338,13 @@ label {
             }
 
             &::after {
-                background-color: var(--cirrus-gray);
+                background-color: map-get($colors, "grey");
                 border-radius: 50%;
                 height: 16px;
                 left: 4px;
                 width: 16px;
                 transform: translateY(-50%);
-                transition: left var(--animation-duration) ease;
+                transition: left 0.2s ease;
                 text-align: left;
             }
         }
@@ -1361,12 +1361,12 @@ label {
             left: -1.5rem;
             position: absolute;
             top: 0.3rem;
-            transition: all var(--animation-duration);
+            transition: all 0.2s;
             width: 1rem;
         }
 
         &:before {
-            background-color: var(--cirrus-light);
+            background-color: map-get($colors, "light");
             border: 1px solid #dee2e6;
             border-radius: 0.25rem;
             pointer-events: none;

@@ -1,8 +1,7 @@
 .tag {
     align-items: center;
-    background-color: var(--cirrus-light);
+    background-color: map-get($colors, "light");
     border-radius: 0.25rem;
-    color: var(--cirrus-fg);
     display: inline-flex;
     font-size: 75%;
     line-height: 1.5;
@@ -10,21 +9,21 @@
     padding: 0 0.5rem;
     white-space: nowrap;
 
-    &.tag--large {
+    &.tag-large {
         font-size: 120%;
         padding: 0.25rem 0.75rem;
     }
 
-    &.tag--xlarge {
+    &.tag-xlarge {
         font-size: 150%;
         padding: 0.5rem 1.25rem;
     }
 
-    &.tag--rounded {
+    &.tag-rounded {
         border-radius: 290486px;
     }
 
-    &.tag__delete {
+    &.tag-delete {
         background-color: rgba(10, 10, 10, 0.2);
         border-radius: 290486px;
         cursor: pointer;
@@ -42,7 +41,7 @@
         }
 
         &::before, &::after {
-            background-color: var(--cirrus-light);
+            background-color: map-get($colors, "light");
             content: '';
             display: block;
             left: 50%;
@@ -68,24 +67,24 @@
         margin-right: -0.125rem;
     }
 
-    &.tag--white {
+    &.tag-white {
         background-color: #fff;
-        color: var(--cirrus-dark);
+        color: map-get($colors, "dark");
     }
 
-    &.tag--black {
+    &.tag-black {
         background-color: #000;
         color: #fff;
     }
 
-    &.tag--primary {
+    &.tag-primary {
         background-color: map-get($colors, "primary");
         color: #fff;
         background-color: #f03d4d;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #ee2537;
             }
@@ -96,12 +95,12 @@
         }
     }
 
-    &.tag--gray {
+    &.tag-gray {
         background-color: #d5d7dc;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #c7cad0;
             }
@@ -112,12 +111,12 @@
         }
     }
 
-    &.tag--dark {
+    &.tag-dark {
         background-color: #363636;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #292929;
             }
@@ -128,12 +127,12 @@
         }
     }
 
-    &.tag--link {
+    &.tag-link {
         background-color: #5e5cc7;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #4b49c0;
             }
@@ -144,12 +143,12 @@
         }
     }
 
-    &.tag--info {
+    &.tag-info {
         background-color: #2972fa;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #1062f9;
             }
@@ -160,12 +159,12 @@
         }
     }
 
-    &.tag--success {
+    &.tag-success {
         background-color: #0dd157;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #0cb94d;
             }
@@ -176,12 +175,12 @@
         }
     }
 
-    &.tag--warning {
+    &.tag-warning {
         background-color: #fab633;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #f9ad1a;
             }
@@ -192,12 +191,12 @@
         }
     }
 
-    &.tag--danger {
+    &.tag-danger {
         background-color: #fb4143;
         color: #fff;
         cursor: pointer;
 
-        &.tag__close-btn {
+        &.tag-close-btn {
             &:hover {
                 background-color: #fa282a;
             }
@@ -208,13 +207,13 @@
         }
     }
 
-    &.tag__close-btn {
+    &.tag-close-btn {
         padding: 0;
         position: relative;
         width: 1.5rem;
 
         &::before, &::after {
-            background-color: var(--cirrus-fg);
+            background-color: map-get($colors, "dark");
             content: '';
             display: block;
             left: 50%;
@@ -244,8 +243,6 @@
     }
 
     &.group-tags {
-        --tag-first-border-radius:0.25rem 0 0 0.25rem;
-        --tag-last-border-radius:0 0.25rem 0.25rem 0;
         display: flex;
         flex-wrap: wrap;
 
@@ -253,7 +250,7 @@
             margin-right: 0 !important;
 
             &:first-child {
-                border-radius: var(--tag-first-border-radius);
+                border-radius: 0.25rem 0 0 0.25rem;
             }
 
             &:not(:first-child):not(:last-child) {
@@ -261,17 +258,23 @@
             }
 
             &:last-child {
-                border-radius: var(--tag-last-border-radius);
+                border-radius: 0 0.25rem 0.25rem 0;
             }
         }
 
-        &.group-tags--rounded {
-            --tag-first-border-radius:290486px 0 0 290486px;
-            --tag-last-border-radius:0 290486px 290486px 0;
+        &.group-tags-rounded {
+            .tag {
+                &:first-child {
+                    border-radius: 290486px 0 0 290486px;
+                }
+                &:last-child {
+                    border-radius: 0 290486px 290486px 0;
+                }
+            }
         }
     }
 
-    &.tag-container--centered {
+    &.tag-container-centered {
         justify-content: center;
 
         .tag {
@@ -279,7 +282,7 @@
         }
     }
 
-    &.tag-container--right {
+    &.tag-container-right {
         justify-content: flex-end;
 
         .tag {

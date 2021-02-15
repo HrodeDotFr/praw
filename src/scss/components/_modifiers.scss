@@ -1,18 +1,18 @@
-button.btn--pilled,
-.btn.btn--pilled,
-[type="submit"].btn--pilled,
-[class^='btn-'].btn--pilled,
-[class*=' btn-'].btn--pilled {
+button.btn-pilled,
+.btn.btn-pilled,
+[type="submit"].btn-pilled,
+[class^='btn-'].btn-pilled,
+[class*=' btn-'].btn-pilled {
     border-radius: 6.25rem;
     padding-left: 1.25rem;
     padding-right: 1.25rem;
 }
 
-button.btn--circle,
-.btn.btn--circle,
-[type="submit"].btn--circle,
-[class^='btn-'].btn--circle,
-[class*=' btn-'].btn--circle {
+button.btn-circle,
+.btn.btn-circle,
+[type="submit"].btn-circle,
+[class^='btn-'].btn-circle,
+[class*=' btn-'].btn-circle {
     border-radius: 100%;
     min-width: 60px;
     overflow: hidden;
@@ -20,28 +20,28 @@ button.btn--circle,
     text-align: center;
 }
 
-button.btn--circle:before,
-.btn.btn--circle:before,
-[type="submit"].btn--circle:before,
-[class^='btn-'].btn--circle:before,
-[class*=' btn-'].btn--circle:before {
+button.btn-circle:before,
+.btn.btn-circle:before,
+[type="submit"].btn-circle:before,
+[class^='btn-'].btn-circle:before,
+[class*=' btn-'].btn-circle:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
     padding-top: 100%;
 }
 
-button.btn--circle *,
-.btn.btn--circle *,
-[type="submit"].btn--circle *,
-[class^='btn-'].btn--circle *,
-[class*=' btn-'].btn--circle * {
+button.btn-circle *,
+.btn.btn-circle *,
+[type="submit"].btn-circle *,
+[class^='btn-'].btn-circle *,
+[class*=' btn-'].btn-circle * {
     display: inline;
     max-width: 90%;
     vertical-align: middle;
     white-space: pre-wrap;
 }
 
-.input-control--pilled {
+.input-control-pilled {
     border-radius: 6.25rem !important;
 }

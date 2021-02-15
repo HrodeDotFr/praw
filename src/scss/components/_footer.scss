@@ -1,11 +1,11 @@
 .footer {
-    background-color: #343a40;
+    background-color: map-get($colors, "dark");
     padding: 6rem 0;
     text-align: center;
     margin-top: 5rem;
     width: 100%;
 
-    &.footer--fixed {
+    &.footer-fixed {
         bottom: 0;
         position: fixed;
     }
@@ -27,14 +27,14 @@
         margin: 0.5rem 0;
     }
 
-    .footer__title {
+    .footer-title {
         text-align: center;
         letter-spacing: 6px;
         position: relative;
         padding-bottom: 10px;
     }
 
-    .footer__list-title {
+    .footer-list-title {
         color: #ced4da;
         font-size: 75%;
         text-transform: uppercase;
@@ -50,10 +50,10 @@
         }
     }
 
-    ul a .footer__list-item, .footer__list-item {
+    ul a .footer-list-item, .footer-list-item {
         margin: 0.1rem;
         color: #868e96;
-        transition: all var(--animation-duration);
+        transition: all 0.2s;
         font-size: 75%;
         text-transform: uppercase;
     }

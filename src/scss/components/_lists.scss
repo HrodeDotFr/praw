@@ -78,17 +78,17 @@ ul {
             display: block;
             padding: 0.5em 0.75em;
             border-radius: 3px;
-            font-size: var(--font-size-s);
+            font-size: 0.85rem;
             cursor: pointer;
-            -webkit-transition: all var(--animation-duration);
-            transition: all var(--animation-duration);
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
         }
 
         &:hover > a {
             background-color: rgba(208, 208, 208, 0.3);
             color: map-get($colors, "primary");
-            -webkit-transition: all var(--animation-duration);
-            transition: all var(--animation-duration);
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
         }
 
         &.selected > a {
@@ -100,12 +100,11 @@ ul {
             padding: 0.3rem;
             z-index: 1;
             position: relative;
-            color: var(--cirrus-fg);
             cursor: pointer;
             float: left;
             margin-right: 0.1rem;
-            -webkit-transition: all var(--animation-duration);
-            transition: all var(--animation-duration);
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
 
             .icon {
                 font-size: inherit;
@@ -113,8 +112,8 @@ ul {
             }
 
             &:hover {
-                -webkit-transition: all var(--animation-duration);
-                transition: all var(--animation-duration);
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
             }
 
             &.right {
@@ -146,7 +145,6 @@ ul {
 
         &::after {
             content: attr(data-label);
-            background-color: var(--cirrus-bg);
             color: #adb5bd;
             display: inline-block;
             padding: 0 0.7rem;
@@ -166,9 +164,8 @@ ul {
         position: absolute;
         top: 75%;
         left: 0;
-        -webkit-animation: slide-down var(--animation-duration) ease 1;
+        -webkit-animation: slide-down 0.2s ease 1;
         animation: slide-down 0.1s ease 1;
-        background-color: var(--cirrus-bg);
         border-radius: 0.2rem;
         box-shadow: 0 1rem 3rem rgba(149, 157, 165, 0.3);
         margin: 0;
@@ -180,8 +177,8 @@ ul {
         z-index: 10;
         pointer-events: none;
         overflow: hidden;
-        -webkit-transition: all var(--animation-duration);
-        transition: all var(--animation-duration);
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
     }
 
     &.dropdown-right .menu {
@@ -196,8 +193,8 @@ ul {
         z-index: 100;
         pointer-events: auto;
         height: auto;
-        -webkit-transition: all var(--animation-duration);
-        transition: all var(--animation-duration);
+        -webkit-transition: all 0.2s;
+        transition: all 0.2s;
     }
 
     .btn-group .btn-dropdown:nth-last-child(2) {
@@ -225,8 +222,8 @@ ul {
             font-weight: 700;
 
             .icon {
-                -webkit-transition: all var(--animation-duration);
-                transition: all var(--animation-duration);
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
             }
         }
 
@@ -245,8 +242,8 @@ ul {
             max-height: 0;
             margin-left: 1.5rem;
             overflow: hidden;
-            -webkit-transition: all var(--animation-duration);
-            transition: all var(--animation-duration);
+            -webkit-transition: all 0.2s;
+            transition: all 0.2s;
         }
     }
 }
@@ -311,19 +308,19 @@ ul {
         top: 0;
         -webkit-transform: translateX(-100%);
         transform: translateX(-100%);
-        transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-        -webkit-transition: -webkit-transform var(--animation-duration) ease;
-        transition: transform var(--animation-duration) ease;
-        transition: -webkit-transform var(--animation-duration) ease;
+        transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+        -webkit-transition: -webkit-transform 0.2s ease;
+        transition: transform 0.2s ease;
+        transition: -webkit-transform 0.2s ease;
         z-index: 400;
 
         &:target {
             -webkit-transform: translateX(0);
             transform: translateX(0);
-            transition: transform var(--animation-duration) ease, -webkit-transform var(--animation-duration) ease;
-            -webkit-transition: -webkit-transform var(--animation-duration) ease;
-            transition: -webkit-transform var(--animation-duration) ease;
-            transition: transform var(--animation-duration) ease;
+            transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+            -webkit-transition: -webkit-transform 0.2s ease;
+            transition: -webkit-transform 0.2s ease;
+            transition: transform 0.2s ease;
 
             + .tree-nav-close {
                 display: block;

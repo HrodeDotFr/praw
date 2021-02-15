@@ -8,21 +8,21 @@
     -ms-flex-direction: column;
 }
 
-.frame .frame__header,
-.frame .frame__footer {
+.frame .frame-header,
+.frame .frame-footer {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
     padding: 1rem;
 }
 
-.frame .frame__nav {
+.frame .frame-nav {
     flex: 0 0 auto;
     -webkit-flex: 0 0 auto;
     -ms-flex: 0 0 auto;
 }
 
-.frame .frame__body {
+.frame .frame-body {
     flex: 1 1 auto;
     -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
@@ -30,13 +30,13 @@
     padding: 0 1rem;
 }
 
-.frame .frame__title {
+.frame .frame-title {
     color: #374054;
     font-size: 1rem;
     margin: .75rem auto 0;
 }
 
-.frame .frame__subtitle {
+.frame .frame-subtitle {
     color: rgba(55, 64, 84, 0.6);
     font-size: 1rem;
     margin: 0 auto .75rem;

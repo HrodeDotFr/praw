@@ -26,7 +26,6 @@ body {
     font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     letter-spacing: 0.01rem;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
-    color: var(--cirrus-fg);
 }
 
 ul {
@@ -93,7 +92,7 @@ fieldset legend {
 }
 
 ::selection {
-    background-color: var(--cirrus-select-bg);
+    background-color: rgba(0, 161, 255, 0.2);
 }
 
 :focus {

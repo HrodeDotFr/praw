@@ -35,8 +35,8 @@
     }
 
     &:target .modal-container, &.shown .modal-container {
-        -webkit-animation: slide-down var(--animation-duration) ease 1;
-        animation: slide-down var(--animation-duration) ease 1;
+        -webkit-animation: slide-down 0.2s ease 1;
+        animation: slide-down 0.2s ease 1;
         z-index: 1;
     }
 
@@ -49,21 +49,16 @@
     }
 
     .modal-content {
-        background-color: var(--cirrus-bg);
+        background-color: #fff;
         padding: 0;
         display: block;
         border-radius: 3px;
         box-shadow: 0 0.4rem 1rem rgba(54, 54, 54, 0.3);
         z-index: 1;
-        color: var(--cirrus-fg);
         max-width: 40rem;
 
         &.small {
             max-width: 32rem;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            color: var(--cirrus-fg);
         }
 
         .modal-header {
@@ -87,12 +82,12 @@
         }
     }
 
-    &.modal-animated--dropdown {
-        -webkit-animation: slide-down var(--animation-duration) ease 1;
-        animation: slide-down var(--animation-duration) ease 1;
+    &.modal-animated-dropdown {
+        -webkit-animation: slide-down 0.2s ease 1;
+        animation: slide-down 0.2s ease 1;
     }
 
-    &.modal-animated--zoom-in, &.modal-animated--zoom-out {
+    &.modal-animated-zoom-in, &.modal-animated-zoom-out {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -101,25 +96,25 @@
     }
 
     &:target {
-        &.modal-animated--zoom-in, &.modal-animated--zoom-out {
+        &.modal-animated-zoom-in, &.modal-animated-zoom-out {
             opacity: 1;
             transition: 300ms all ease;
         }
     }
 
-    &.modal-animated--zoom-in .modal-content {
+    &.modal-animated-zoom-in .modal-content {
         transform: scale(0.8);
         transition: 300ms all ease;
     }
 
     &:target {
-        &.modal-animated--zoom-in .modal-content, &.modal-animated--zoom-out .modal-content {
+        &.modal-animated-zoom-in .modal-content, &.modal-animated-zoom-out .modal-content {
             transform: scale(1);
             transition: 300ms all ease;
         }
     }
 
-    &.modal-animated--zoom-out .modal-content {
+    &.modal-animated-zoom-out .modal-content {
         transform: scale(1.2);
         transition: 300ms all ease;
     }
