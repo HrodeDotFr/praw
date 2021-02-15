@@ -4,27 +4,21 @@
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
     padding: 1rem;
-    display: none;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    pointer-events: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 1;
+    z-index: 999;
+    pointer-events: auto;
 
-    &:target, &.shown {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        opacity: 1;
-        z-index: 999;
-        pointer-events: auto;
-    }
-
-    &:target .modal-overlay, &.shown .modal-overlay {
+    &.modal-overlay, & .modal-overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -34,7 +28,7 @@
         background-color: rgba(54, 54, 54, 0.5);
     }
 
-    &:target .modal-container, &.shown .modal-container {
+    & .modal-container, & .modal-container {
         -webkit-animation: slide-down 0.2s ease 1;
         animation: slide-down 0.2s ease 1;
         z-index: 1;
@@ -95,7 +89,7 @@
         transition: 300ms all ease;
     }
 
-    &:target {
+    & {
         &.modal-animated-zoom-in, &.modal-animated-zoom-out {
             opacity: 1;
             transition: 300ms all ease;
@@ -107,7 +101,7 @@
         transition: 300ms all ease;
     }
 
-    &:target {
+    & {
         &.modal-animated-zoom-in .modal-content, &.modal-animated-zoom-out .modal-content {
             transform: scale(1);
             transition: 300ms all ease;

@@ -1,17 +1,17 @@
 code {
-    --code-bg:map-get($colors, "light");
-    --code-fg:map-get($colors, "dark");
-    --code-label-fg:#868e96;
-    --border-left-bg:#e9ecef;
+    #{$var-element}code-bg:map-get($colors, "light");
+    #{$var-element}code-fg:map-get($colors, "dark");
+    #{$var-element}code-label-fg:#868e96;
+    #{$var-element}border-left-bg:#e9ecef;
     padding: 0.3rem;
     margin: 0.5em 0;
     overflow: auto;
-    background-color: var(--code-bg);
-    color: var(--code-fg);
+    background-color: var(#{$var-element}code-bg);
+    color: var(#{$var-element}code-fg);
     border-radius: 3px;
 
     &:before {
-        color: var(--code-label-fg);
+        color: var(#{$var-element}code-label-fg);
         content: attr(data-lang);
         font-size: 0.9rem;
         position: absolute;
@@ -20,15 +20,15 @@ code {
     }
 
     &.dark {
-        --code-bg:map-get($colors, "dark");
-        --code-fg:map-get($colors, "light");
-        --border-left-bg:#212529;
-        --code-label-fg:#ced4da;
+        #{$var-element}code-bg:map-get($colors, "dark");
+        #{$var-element}code-fg:map-get($colors, "light");
+        #{$var-element}border-left-bg:#212529;
+        #{$var-element}code-label-fg:#ced4da;
     }
 }
 
 pre > code {
-    background-color: var(--code-bg);
+    background-color: var(#{$var-element}code-bg);
     font-size: 14px;
     display: block;
     padding: 1rem;
@@ -42,10 +42,10 @@ pre > code {
     -moz-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    border-left: 0.3rem solid var(--border-left-bg);
+    border-left: 0.3rem solid var(#{$var-element}border-left-bg);
     margin: 0;
     position: relative;
-    color: var(--code-fg);
+    color: var(#{$var-element}code-fg);
 
     &[data-lang]:not([data-lang='']) {
         padding: 2rem 1.5rem 1rem;

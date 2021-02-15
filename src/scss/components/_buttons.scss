@@ -1,4 +1,7 @@
 .btn, button, [type="submit"], [type="reset"], [type="button"] {
+    #{$var-element}btn-bck:map-get($colors, "light");
+    #{$var-element}btn-color:map-get($colors, "dark");
+    #{$var-element}btn-border:darken(map-get($colors, "light"), 5%);
     line-height: 2rem;
     overflow: hidden;
     padding: 0.5rem 1rem;
@@ -7,9 +10,9 @@
     cursor: pointer;
     text-align: center;
     transition: all 0.2s;
-    background-color: var(--btn-bck);
-    border-color: var(--btn-border);
-    color: var(--btn-color);
+    background-color: var(#{$var-element}btn-bck);
+    border-color: var(#{$var-element}btn-border);
+    color: var(#{$var-element}btn-color);
     font-size: 0.75rem;
     letter-spacing: 0.03rem;
     text-transform: uppercase;
@@ -18,15 +21,11 @@
     user-select: none;
     margin-bottom: 1rem;
     outline: none;
-    --btn-bck:map-get($colors, "light");
-    --btn-color:map-get($colors, "dark");
-    --btn-border:darken(map-get($colors, "light"), 5%);
 }
 
 .btn:hover, button:hover, [type="submit"]:hover, [type="reset"]:hover, [type="button"]:hover {
     transition: all 0.2s;
-    --btn-bck:lighten(map-get($colors, "light"), 5%);
-    color: var(--btn-color);
+    #{$var-element}btn-bck:lighten(map-get($colors, "light"), 5%);
 }
 
 .btn:active, button:active, [type="submit"]:active, [type="reset"]:active, [type="button"]:active {
@@ -47,7 +46,7 @@
 }
 
 .btn.outline, button.outline, [type="submit"].outline, [type="reset"].outline, [type="button"].outline {
-    --btn-bck:transparent;
+    #{$var-element}btn-bck:transparent;
 }
 
 .btn.loading:active::after, button.loading:active::after, [type="submit"].loading:active::after, [type="reset"].loading:active::after, [type="button"].loading:active::after {
@@ -90,7 +89,6 @@
 }
 
 .btn.btn-close::before, button.btn-close::before, [type="submit"].btn-close::before, [type="reset"].btn-close::before, [type="button"].btn-close::before {
-    background-color: var(--bg);
     content: '';
     display: block;
     left: 50%;
@@ -105,7 +103,6 @@
 }
 
 .btn.btn-close::after, button.btn-close::after, [type="submit"].btn-close::after, [type="reset"].btn-close::after, [type="button"].btn-close::after {
-    background-color: var(--bg);
     content: '';
     display: block;
     left: 50%;
@@ -120,9 +117,9 @@
 }
 
 .btn.btn-transparent, button.btn-transparent, [type="submit"].btn-transparent, [type="reset"].btn-transparent, [type="button"].btn-transparent {
-    --btn-bck:transparent;
-    --btn-color:map-get($colors, "dark");
-    --btn-border:transparent;
+    #{$var-element}btn-bck:transparent;
+    #{$var-element}btn-color:map-get($colors, "dark");
+    #{$var-element}btn-border:transparent;
 }
 
 .btn.btn-transparent:focus, button.btn-transparent:focus, [type="submit"].btn-transparent:focus, [type="reset"].btn-transparent:focus, [type="button"].btn-transparent:focus {
@@ -130,23 +127,23 @@
 }
 
 .btn.btn-transparent:hover, button.btn-transparent:hover, [type="submit"].btn-transparent:hover, [type="reset"].btn-transparent:hover, [type="button"].btn-transparent:hover {
-    --btn-bck:rgba(0, 0, 0, 0.1);
+    #{$var-element}btn-bck:rgba(0, 0, 0, 0.1);
 }
 
 .btn.btn-transparent.outline, button.btn-transparent.outline, [type="submit"].btn-transparent.outline, [type="reset"].btn-transparent.outline, [type="button"].btn-transparent.outline {
-    --btn-color:map-get($colors, "dark");
+    #{$var-element}btn-color:map-get($colors, "dark");
 }
 
 @each $name, $color in $colors {
     .btn.btn-#{$name}, button.btn-#{$name} {
-        --btn-bck:$color;
-        --btn-color:choose-contrast-color($color);
-        --btn-border:darken($color, 5%);
+        #{$var-element}btn-bck:$color;
+        #{$var-element}btn-color:choose-contrast-color($color);
+        #{$var-element}btn-border:darken($color, 5%);
     }
 
     .btn.btn-#{$name}:hover, button.btn-#{$name}:hover {
-        --btn-bck:lighten($color, 5%);
-        --btn-border:$color;
+        #{$var-element}btn-bck:lighten($color, 5%);
+        #{$var-element}btn-border:$color;
     }
 
     .btn.btn-#{$name}:focus, button.btn-#{$name}:focus {
@@ -191,26 +188,19 @@
 }
 
 [class^='btn-']:not(.btn-container):not(.btn-close), [class*=' btn-']:not(.btn-container):not(.btn-close) {
-    background-color: var(--btn-bck);
-    border: 1px solid var(--btn-border);
-    color: var(--btn-color);
+    border: 1px solid var(#{$var-element}btn-border);
     transition: all 0.2s;
 }
 
 [class^='btn-']:not(.btn-container):not(.btn-close):hover, [class*=' btn-']:not(.btn-container):not(.btn-close):hover {
-    background-color: var(--btn-bck);
-    border-color: var(--btn-border);
     transition: all 0.2s;
 }
 
 [class^='btn-']:not(.btn-container):not(.btn-close).outline, [class*=' btn-']:not(.btn-container):not(.btn-close).outline {
     background-color: transparent;
-    color: var(--btn-bck);
 }
 
 [class^='btn-']:not(.btn-container):not(.btn-close).outline:hover, [class*=' btn-']:not(.btn-container):not(.btn-close).outline:hover {
-    background-color: var(--btn-bck);
-    color: var(--btn-color);
     transition: all 0.2s;
 }
 
