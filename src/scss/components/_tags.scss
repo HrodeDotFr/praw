@@ -67,142 +67,19 @@
         margin-right: -0.125rem;
     }
 
-    &.tag-white {
-        background-color: #fff;
-        color: map-get($colors, "dark");
-    }
+    @each $name, $color in $colors {
+        .tag-#{$name} {
+            background-color: $color;
+            color: choose-contrast-color($color);
 
-    &.tag-black {
-        background-color: #000;
-        color: #fff;
-    }
+            &.tag-close-btn {
+                &:hover {
+                    background-color: darken($color, 10%);
+                }
 
-    &.tag-primary {
-        background-color: map-get($colors, "primary");
-        color: #fff;
-        background-color: #f03d4d;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #ee2537;
-            }
-
-            &:active {
-                background-color: #e81225;
-            }
-        }
-    }
-
-    &.tag-gray {
-        background-color: #d5d7dc;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #c7cad0;
-            }
-
-            &:active {
-                background-color: #b9bdc5;
-            }
-        }
-    }
-
-    &.tag-dark {
-        background-color: #363636;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #292929;
-            }
-
-            &:active {
-                background-color: #1d1d1d;
-            }
-        }
-    }
-
-    &.tag-link {
-        background-color: #5e5cc7;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #4b49c0;
-            }
-
-            &:active {
-                background-color: #403db3;
-            }
-        }
-    }
-
-    &.tag-info {
-        background-color: #2972fa;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #1062f9;
-            }
-
-            &:active {
-                background-color: #0555eb;
-            }
-        }
-    }
-
-    &.tag-success {
-        background-color: #0dd157;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #0cb94d;
-            }
-
-            &:active {
-                background-color: #0aa143;
-            }
-        }
-    }
-
-    &.tag-warning {
-        background-color: #fab633;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #f9ad1a;
-            }
-
-            &:active {
-                background-color: #f4a306;
-            }
-        }
-    }
-
-    &.tag-danger {
-        background-color: #fb4143;
-        color: #fff;
-        cursor: pointer;
-
-        &.tag-close-btn {
-            &:hover {
-                background-color: #fa282a;
-            }
-
-            &:active {
-                background-color: #fa0f12;
+                &:active {
+                    background-color: darken($color, 15%);
+                }
             }
         }
     }

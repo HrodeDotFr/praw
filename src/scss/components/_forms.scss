@@ -830,123 +830,15 @@ label {
             background-color: map-get($colors, "primary");
         }
 
-        &.form-ext-input-primary {
-            &:checked ~ .form-ext-label {
-                color: map-get($colors, "primary");
+        @each $name, $color in $colors {
+            &.form-ext-input-#{$name} {
+                &:checked ~ .form-ext-label {
+                    color: $color;
 
-                &:before {
-                    background-color: map-get($colors, "primary");
+                    &:before {
+                        background-color: $color;
+                    }
                 }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-input-gray {
-            &:checked ~ .form-ext-label {
-                color: map-get($colors, "grey");
-
-                &:before {
-                    background-color: map-get($colors, "grey");
-                }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-input-dark {
-            &:checked ~ .form-ext-label {
-                color: map-get($colors, "dark");
-
-                &:before {
-                    background-color: map-get($colors, "dark");
-                }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-input-link {
-            &:checked ~ .form-ext-label {
-                color: #5e5cc7;
-
-                &:before {
-                    background-color: #5e5cc7;
-                }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-input-info {
-            &:checked ~ .form-ext-label {
-                color: map-get($colors, "info");
-
-                &:before {
-                    background-color: map-get($colors, "info");
-                }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-input-success {
-            &:checked ~ .form-ext-label {
-                color: map-get($colors, "conf");
-
-                &:before {
-                    background-color: map-get($colors, "conf");
-                }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-input-warning {
-            &:checked ~ .form-ext-label {
-                color: map-get($colors, "warn");
-
-                &:before {
-                    background-color: map-get($colors, "warn");
-                }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-input-danger {
-            &:checked ~ .form-ext-label {
-                color: map-get($colors, "err");
-
-                &:before {
-                    background-color: map-get($colors, "err");
-                }
-            }
-
-            &:focus ~ .form-ext-label:before {
-                border-color: inherit;
-                box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
         }
 
@@ -1040,284 +932,41 @@ label {
             }
         }
 
-        &.form-ext-toggle-primary input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "primary");
-                    border-color: map-get($colors, "primary");
+        @each $name, $color in $colors {
+            &.form-ext-toggle-#{$name} input {
+                &[type='checkbox']:checked + {
+                    .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                        background-color: $color;
+                        border-color: $color;
+                    }
+                }
+
+                &[type='radio']:checked + {
+                    .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
+                        background-color: $color;
+                        border-color: $color;
+                    }
                 }
             }
 
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "primary");
-                    border-color: map-get($colors, "primary");
-                }
-            }
-        }
+            .form-ext-toggle-#{$name} .form-ext-toggle-toggler {
+                border-color: $color;
+                color: $color;
 
-        .form-ext-toggle-primary .form-ext-toggle-toggler {
-            border-color: map-get($colors, "primary");
-            color: map-get($colors, "primary");
-
-            i::after {
-                background-color: map-get($colors, "primary");
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-primary .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(240, 61, 77, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-        }
-
-        &.form-ext-toggle-gray input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "grey");
-                    border-color: map-get($colors, "grey");
+                i::after {
+                    background-color: $color;
                 }
             }
 
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "grey");
-                    border-color: map-get($colors, "grey");
-                }
-            }
-        }
-
-        .form-ext-toggle-gray .form-ext-toggle-toggler {
-            border-color: map-get($colors, "grey");
-            color: map-get($colors, "grey");
-
-            i::after {
-                background-color: map-get($colors, "grey");
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-gray .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(213, 215, 220, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-        }
-
-        &.form-ext-toggle-dark input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "dark");
-                    border-color: map-get($colors, "dark");
+            .form-ext-input:focus {
+                + .form-ext-toggle-toggler, ~ .form-ext-label:before {
+                    box-shadow: 0 0 0 0.2rem rgba(213, 213, 213, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
                 }
             }
 
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "dark");
-                    border-color: map-get($colors, "dark");
-                }
+            &.form-ext-toggle-#{$name} .form-ext-input:focus + .form-ext-toggle-toggler {
+                box-shadow: 0 0 0 0.2rem rgba(61, 61, 61, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
             }
-        }
-
-        .form-ext-toggle-dark .form-ext-toggle-toggler {
-            border-color: map-get($colors, "dark");
-            color: map-get($colors, "dark");
-
-            i::after {
-                background-color: map-get($colors, "dark");
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-dark .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(54, 54, 54, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-        }
-
-        &.form-ext-toggle-link input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: #5e5cc7;
-                    border-color: #5e5cc7;
-                }
-            }
-
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: #5e5cc7;
-                    border-color: #5e5cc7;
-                }
-            }
-        }
-
-        .form-ext-toggle-link .form-ext-toggle-toggler {
-            border-color: #5e5cc7;
-            color: #5e5cc7;
-
-            i::after {
-                background-color: #5e5cc7;
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-link .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(94, 92, 199, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-        }
-
-        &.form-ext-toggle-info input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "info");
-                    border-color: map-get($colors, "info");
-                }
-            }
-
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "info");
-                    border-color: map-get($colors, "info");
-                }
-            }
-        }
-
-        .form-ext-toggle-info .form-ext-toggle-toggler {
-            border-color: map-get($colors, "info");
-            color: map-get($colors, "info");
-
-            i::after {
-                background-color: map-get($colors, "info");
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-info .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(41, 114, 250, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-        }
-
-        &.form-ext-toggle-success input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "conf");
-                    border-color: map-get($colors, "conf");
-                }
-            }
-
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "conf");
-                    border-color: map-get($colors, "conf");
-                }
-            }
-        }
-
-        .form-ext-toggle-success .form-ext-toggle-toggler {
-            border-color: map-get($colors, "conf");
-            color: map-get($colors, "conf");
-
-            i::after {
-                background-color: map-get($colors, "conf");
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-success .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-        }
-
-        &.form-ext-toggle-warning input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "warn");
-                    border-color: map-get($colors, "warn");
-                }
-            }
-
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "warn");
-                    border-color: map-get($colors, "warn");
-                }
-            }
-        }
-
-        .form-ext-toggle-warning .form-ext-toggle-toggler {
-            border-color: map-get($colors, "warn");
-            color: map-get($colors, "warn");
-
-            i::after {
-                background-color: map-get($colors, "warn");
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-warning .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(250, 182, 51, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-        }
-
-        &.form-ext-toggle-danger input {
-            &[type='checkbox']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "err");
-                    border-color: map-get($colors, "err");
-                }
-            }
-
-            &[type='radio']:checked + {
-                .form-ext-toggle-toggler, * .form-ext-toggle-toggler {
-                    background-color: map-get($colors, "err");
-                    border-color: map-get($colors, "err");
-                }
-            }
-        }
-
-        .form-ext-toggle-danger .form-ext-toggle-toggler {
-            border-color: map-get($colors, "err");
-            color: map-get($colors, "err");
-
-            i::after {
-                background-color: map-get($colors, "err");
-            }
-        }
-
-        .form-ext-input:focus {
-            + .form-ext-toggle-toggler, ~ .form-ext-label:before {
-                box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
-            }
-        }
-
-        &.form-ext-toggle-danger .form-ext-input:focus + .form-ext-toggle-toggler {
-            box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0 1px 8px rgba(0, 0, 0, 0.07);
         }
 
         .form-ext-toggle-toggler i {

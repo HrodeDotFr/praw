@@ -42,45 +42,10 @@
         top: 1rem;
     }
 
-    &.toast-primary {
-        background-color: map-get($colors, "primary");
-        border-color: map-get($colors, "primary");
-        background-color: #f03d4d;
-        border-color: #f03d4d;
-    }
-
-    &.toast-gray {
-        background-color: #d5d7dc;
-        border-color: #d5d7dc;
-    }
-
-    &.toast-dark {
-        background-color: #363636;
-        border-color: #363636;
-    }
-
-    &.toast-link {
-        background-color: #5e5cc7;
-        border-color: #5e5cc7;
-    }
-
-    &.toast-info {
-        background-color: #2972fa;
-        border-color: #2972fa;
-    }
-
-    &.toast-success {
-        background-color: #0dd157;
-        border-color: #0dd157;
-    }
-
-    &.toast-warning {
-        background-color: #fab633;
-        border-color: #fab633;
-    }
-
-    &.toast-danger {
-        background-color: #fb4143;
-        border-color: #fb4143;
+    @each $name, $color in $colors {
+        &.toast-#{$name} {
+            background-color: $color;
+            border-color: darken($color, 5%);
+        }
     }
 }
