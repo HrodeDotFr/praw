@@ -220,22 +220,12 @@ input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type=
     padding: 0.55rem 0.8rem !important;
 }
 
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-success, select.input-success {
-    border-color: map-get($colors, "conf");
-    background-color: rgba(0, 224, 0, 0.05) !important;
-}
+@each $name, $color in $colors {
+    input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-#{$name}, select.input-#{$name}, textarea.input-#{$name} {
+        border-color: $color;
+        background-color: lighten($color, 40%);
+    }
 
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-success:focus, select.input-success:focus {
-    box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-error, select.input-error {
-    border-color: map-get($colors, "err");
-    background-color: rgba(244, 67, 54, 0.05) !important;
-}
-
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']).input-error:focus, select.input-error:focus {
-    box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 textarea {
@@ -441,68 +431,6 @@ textarea {
 input[type='text'].input-focused, .input-focused {
     border-color: #3dabf0;
     box-shadow: 0 0 0 0.2rem rgba(61, 171, 240, 0.45), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']):focus.input-success, select:focus.input-success {
-    border-color: map-get($colors, "conf");
-    background-color: rgba(0, 224, 0, 0.05) !important;
-}
-
-textarea {
-    &:focus.input-success, &[type='text']:focus.input-success {
-        border-color: map-get($colors, "conf");
-        background-color: rgba(0, 224, 0, 0.05) !important;
-    }
-}
-
-input[type='text'].input-focused.input-success, .input-focused.input-success {
-    border-color: map-get($colors, "conf");
-    background-color: rgba(0, 224, 0, 0.05) !important;
-}
-
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']):focus.input-success:focus, select:focus.input-success:focus {
-    box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-textarea {
-    &:focus.input-success:focus, &[type='text']:focus.input-success:focus {
-        box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-    }
-}
-
-input[type='text'].input-focused.input-success:focus, .input-focused.input-success:focus {
-    box-shadow: 0 0 0 0.2rem rgba(13, 209, 87, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']):focus.input-error, select:focus.input-error {
-    border-color: map-get($colors, "err");
-    background-color: rgba(244, 67, 54, 0.05) !important;
-}
-
-textarea {
-    &:focus.input-error, &[type='text']:focus.input-error {
-        border-color: map-get($colors, "err");
-        background-color: rgba(244, 67, 54, 0.05) !important;
-    }
-}
-
-input[type='text'].input-focused.input-error, .input-focused.input-error {
-    border-color: map-get($colors, "err");
-    background-color: rgba(244, 67, 54, 0.05) !important;
-}
-
-input:not([type='checkbox']):not([type='radio']):not([type='submit']):not([type='button']):not([type='reset']):focus.input-error:focus, select:focus.input-error:focus {
-    box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-}
-
-textarea {
-    &:focus.input-error:focus, &[type='text']:focus.input-error:focus {
-        box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
-    }
-}
-
-input[type='text'].input-focused.input-error:focus, .input-focused.input-error:focus {
-    box-shadow: 0 0 0 0.2rem rgba(251, 65, 67, 0.55), inset 0px 1px 8px rgba(0, 0, 0, 0.07);
 }
 
 select {
