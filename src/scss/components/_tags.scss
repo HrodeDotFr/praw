@@ -182,6 +182,10 @@
     }
 }
 
+.tag + .tag {
+    margin-left: 0.25rem;
+}
+
 a.tag:hover {
     text-decoration: underline;
 }
