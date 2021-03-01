@@ -1,28 +1,27 @@
 {
-  "name": "praw",
-  "version": "0.4.1",
-  "description": "Framework front-end",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HrodeDotFr/praw.git"
-  },
-  "author": "Hrode",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/HrodeDotFr/praw/issues"
-  },
-  "homepage": "https://hrodedotfr.github.io/praw/",
-  "keywords": [
-    "framework",
-    "front-end",
-    "scss",
-    "js"
-  ]
+    "name": "praw",
+    "version": "0.4.1",
+    "description": "Framework front-end",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HrodeDotFr/praw.git"
+    },
+    "author": "Hrode",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/HrodeDotFr/praw/issues"
+    },
+    "keywords": [
+        "framework",
+        "front-end",
+        "scss",
+        "js"
+    ]
 }
