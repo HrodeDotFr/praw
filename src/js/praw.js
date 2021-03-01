@@ -165,7 +165,7 @@ Praw.modal.open = function (options) {
     if (options.titleClass) {
         tmp.addClass(options.titleClass);
     }
-    modal.append($('<div>').addClass("modal-header").append(tmp).append($('<div>').addClass("u-pull-right").append($('<span>').addClass("icon-x font-size-x15").on('click', options.modalClosureCallback))));
+    modal.append($('<div>').addClass("modal-header").append(tmp).append($('<div>').addClass("u-pull-right").append($('<span>').addClass("icon-x font-size-x15 cursor-pointer").on('click', options.modalClosureCallback))));
     modal.append($('<div>').addClass("modal-body").append(options.content));
 
     var buttons = [];
