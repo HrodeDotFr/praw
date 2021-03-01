@@ -1,0 +1,33 @@
+.border {
+    @each $side in ("", top, right, bottom, left) {
+        $sideName: $side;
+        @if $side != "" {
+            $sideName: "-" + $side;
+        }
+
+        @each $style in (dotted, dashed, solid, double, groove, ridge, inset, outset) {
+            &#{$sideName}-#{$style} {
+                border#{$sideName}: 1px #{$style} #000000;
+            }
+        }
+
+        @each $name, $color in $colors {
+            &#{$sideName}-#{$name} {
+                border#{$sideName}-color: #{$color};
+            }
+        }
+
+        @for $i from 2 through 15 {
+            &#{$sideName}-x#{$i} {
+                border#{$sideName}-width: #{$i}px;
+            }
+        }
+    }
+
+    @for $i from 1 through 12 {
+        $i:$i*5;
+        &-radius-x#{$i} {
+            border-radius: #{$i}px;
+        }
+    }
+}

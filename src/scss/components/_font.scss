@@ -7,7 +7,7 @@ h1 {
     font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+
 }
 
 h2 {
@@ -15,7 +15,7 @@ h2 {
     font-size: 2.25rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+
 }
 
 h3 {
@@ -23,7 +23,7 @@ h3 {
     font-size: 2rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+
 }
 
 h4 {
@@ -31,7 +31,7 @@ h4 {
     font-size: 1.75rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+
 }
 
 h5 {
@@ -39,7 +39,7 @@ h5 {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+
 }
 
 h6 {
@@ -47,7 +47,7 @@ h6 {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 1rem;
+
 }
 
 h1 {
@@ -59,7 +59,7 @@ article,
 blockquote {
     font-size: 1rem;
     line-height: 2;
-    margin-bottom: 1rem;
+
 }
 
 p.lead {
@@ -70,7 +70,7 @@ blockquote {
     background-color: #f8f9fa;
     border-left: 5px solid #e9ecef;
     border-radius: 3px;
-    margin-bottom: 1rem;
+
     padding: 1rem 2rem;
 }
 
@@ -118,45 +118,26 @@ mark,
 
 .content h1 {
     line-height: 1.125em;
-    margin: 1rem 0;
 }
 
 .content h2 {
     line-height: 1.125em;
-    margin: 1rem 0;
 }
 
 .content h3 {
     line-height: 1.125em;
-    margin: 1rem 0;
 }
 
 .content h4 {
     line-height: 1.125em;
-    margin: 1rem 0;
 }
 
 .content h5 {
     line-height: 1.125em;
-    margin: 1rem 0;
 }
 
 .content h6 {
     line-height: 1.125em;
-    margin: 1rem 0;
-}
-
-.title {
-    font-weight: bold;
-}
-
-.title:not(:last-child),
-.subtitle:not(:last-child) {
-    margin-bottom: 1rem;
-}
-
-.title + .subtitle {
-    margin-top: -0.75rem;
 }
 
 .card-tile p,
@@ -312,10 +293,10 @@ kbd {
     .headline-4 {
         font-size: 3rem;
     }
+}
 
-    p,
-    article,
-    blockquote {
-        margin: 1rem 0;
+@each $sizeName, $sizeRatio in ("025":0.25, "05":0.5, "075":0.75, "1":1, "15":1.5, "2":2, "3":3, "4":4, "5":5) {
+    .font-size-x#{$sizeName} {
+        font-size: #{$sizeRatio}rem;
     }
 }

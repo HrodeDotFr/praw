@@ -54,6 +54,7 @@ Exemple de style scss (dans src/scss)
 @import "components/_reset.scss";
 @import "components/_animations.scss";
 @import "components/_avatars.scss";
+@import "components/_borders.scss";
 @import "components/_buttons.scss";
 @import "components/_cards.scss";
 @import "components/_clearfix.scss";
@@ -67,9 +68,11 @@ Exemple de style scss (dans src/scss)
 @import "components/_frames.scss";
 @import "components/_grid.scss";
 @import "components/_header.scss";
+@import "components/_icons.scss";
 @import "components/_layout.scss";
 @import "components/_links.scss";
 @import "components/_lists.scss";
+@import "components/_loader.scss";
 @import "components/_medias.scss";
 @import "components/_misc.scss";
 @import "components/_modals.scss";
@@ -81,6 +84,7 @@ Exemple de style scss (dans src/scss)
 @import "components/_tables.scss";
 @import "components/_tabs.scss";
 @import "components/_tags.scss";
+@import "components/_text.scss";
 @import "components/_tiles.scss";
 @import "components/_toasts.scss";
 @import "components/_tooltips.scss";
@@ -131,7 +135,13 @@ function views() {
             .pipe(gos.run())
             .pipe(gulp.dest('dist'));
 }
-exports.default = gulp.series(clean, style, prawScripts, scripts, views);
+
+function fonts() {
+    return gulp.src('node_modules/praw/src/fonts/*')
+            .pipe(gulp.dest('dist/fonts'));
+}
+
+exports.default = gulp.series(clean, style, prawScripts, scripts, views, fonts);
 ```
 
 ### Documentation
