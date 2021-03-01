@@ -157,7 +157,7 @@ Praw.modal.open = function (options) {
     var id = Praw.getUniqId();
     Praw.modal.lastId = id;
 
-    var modal = $('<div>').addClass("modal-content").css('min-width', "600px");
+    var modal = $('<div>').addClass("modal-content");
     if (options.modalClass) {
         modal.addClass(options.modalClass);
     }
@@ -203,6 +203,10 @@ Praw.modal.open = function (options) {
         modal.addClass("modal-animated-" + options.animation);
     } else {
         modal.addClass("modal-animated-dropdown");
+    }
+
+    if (options.size) {
+        modal.addClass("modal-" + options.size);
     }
 
     $('body').append(modal);
