@@ -144,9 +144,6 @@ function fonts() {
 exports.default = gulp.series(clean, style, prawScripts, scripts, views, fonts);
 ```
 
-### Documentation
-[CSS et JS](https://hrodedotfr.github.io/praw/)
-
 ### Packages npm conseillés
 | package | utilité |
 | ------ | ------ |
