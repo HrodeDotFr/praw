@@ -42,187 +42,160 @@ Praw.getUniqId = function () {
 /*
  * Loader
  */
-Praw.loader = {};
+Praw.loader = class {
+    constructor(options) {
+        this.id = Praw.getUniqId();
 
-Praw.loader.open = function (options) {
-    var id = Praw.getUniqId();
-    Praw.loader.lastId = id;
-
-    var container = $('body');
-    if (options) {
-        if (options.container) {
-            container = $(options.container);
+        var container = $('body');
+        if (options) {
+            if (options.container) {
+                container = $(options.container);
+            }
         }
+
+        container.addClass('loaderParent').append($('<div>').addClass('loader').append($('<div>'))).attr('data-prawloader', this.id);
     }
 
-    container.addClass('loaderParent').append($('<div>').addClass('loader').append($('<div>'))).attr('data-prawloader', id);
-
-    return id;
-};
-
-Praw.loader.close = function (id) {
-    if (id) {
-        // ok
-    } else if (Praw.loader.lastId) {
-        id = Praw.loader.lastId;
-        delete Praw.loader.lastId;
-    } else {
-        return;
+    close() {
+        $('[data-prawloader="' + this.id + '"]').removeAttr('data-prawloader').removeClass('loaderParent').find('.loader').remove();
     }
-
-    $('[data-prawloader="' + id + '"]').removeAttr('data-prawloader').removeClass('loaderParent').find('.loader').remove();
 };
 
 
 /*
  * Modal
  */
-Praw.modal = {};
+Praw.modal = class {
+    constructor(options) {
+        if (!options) {
+            options = {};
+        }
 
-Praw.modal.open = function (options) {
-    if (!options) {
-        options = {};
-    }
-
-    /*
-     * Générales
-     */
-    if (options.type) {
-        if (options.type === "conf") {
-            if (!options.title) {
-                options.title = "Confirmation";
-            }
-            if (!options.modalClass) {
-                options.modalClass = "border-solid border-conf border-x2";
-            }
-            if (!options.titleClass) {
-                options.titleClass = "color-conf";
-            }
-        } else if (options.type === "err") {
-            if (!options.title) {
-                options.title = "Error";
-            }
-            if (!options.modalClass) {
-                options.modalClass = "border-solid border-err border-x2";
-            }
-            if (!options.titleClass) {
-                options.titleClass = "color-err";
-            }
-        } else if (options.type === "warn") {
-            if (!options.title) {
-                options.title = "Warning";
-            }
-            if (!options.modalClass) {
-                options.modalClass = "border-solid border-warn border-x2";
-            }
-            if (!options.titleClass) {
-                options.titleClass = "color-warn";
-            }
-        } else if (options.type === "info") {
-            if (!options.title) {
-                options.title = "Information";
-            }
-            if (!options.modalClass) {
-                options.modalClass = "border-solid border-info border-x2";
-            }
-            if (!options.titleClass) {
-                options.titleClass = "color-info";
+        /*
+         * Générales
+         */
+        if (options.type) {
+            if (options.type === "conf") {
+                if (!options.title) {
+                    options.title = "Confirmation";
+                }
+                if (!options.modalClass) {
+                    options.modalClass = "border-solid border-conf border-x2";
+                }
+                if (!options.titleClass) {
+                    options.titleClass = "color-conf";
+                }
+            } else if (options.type === "err") {
+                if (!options.title) {
+                    options.title = "Error";
+                }
+                if (!options.modalClass) {
+                    options.modalClass = "border-solid border-err border-x2";
+                }
+                if (!options.titleClass) {
+                    options.titleClass = "color-err";
+                }
+            } else if (options.type === "warn") {
+                if (!options.title) {
+                    options.title = "Warning";
+                }
+                if (!options.modalClass) {
+                    options.modalClass = "border-solid border-warn border-x2";
+                }
+                if (!options.titleClass) {
+                    options.titleClass = "color-warn";
+                }
+            } else if (options.type === "info") {
+                if (!options.title) {
+                    options.title = "Information";
+                }
+                if (!options.modalClass) {
+                    options.modalClass = "border-solid border-info border-x2";
+                }
+                if (!options.titleClass) {
+                    options.titleClass = "color-info";
+                }
             }
         }
-    }
 
-    if (!options.title) {
-        options.title = "";
-    }
-
-    if (!options.content) {
-        options.content = "";
-    }
-
-    /*
-     * Callbacks
-     */
-    var closeModalFunction = function () {
-        Praw.modal.close(id);
-    };
-
-    if (!(options.overlayClosureCallback && typeof options.overlayClosureCallback === "function")) {
-        options.overlayClosureCallback = closeModalFunction;
-    }
-
-    if (!(options.modalClosureCallback && typeof options.modalClosureCallback === "function")) {
-        options.modalClosureCallback = closeModalFunction;
-    }
-
-    var id = Praw.getUniqId();
-    Praw.modal.lastId = id;
-
-    var modal = $('<div>').addClass("modal-content");
-    if (options.modalClass) {
-        modal.addClass(options.modalClass);
-    }
-    var tmp = $('<h6>').text(options.title).addClass("d-inline");
-    if (options.titleClass) {
-        tmp.addClass(options.titleClass);
-    }
-    modal.append($('<div>').addClass("modal-header").append(tmp).append($('<div>').addClass("u-pull-right").append($('<span>').addClass("icon-x font-size-x15 cursor-pointer").on('click', options.modalClosureCallback))));
-    modal.append($('<div>').addClass("modal-body").append(options.content));
-
-    var buttons = [];
-    $.each(options.buttons, function (i, btn) {
-        var tmp = $('<button>').addClass("btn-small");
-        if (btn.name) {
-            tmp.text(btn.name);
+        if (!options.title) {
+            options.title = "";
         }
-        if (btn.type) {
-            if (btn.type === "conf") {
-                tmp.addClass("btn-conf");
-            } else if (btn.type === "err") {
-                tmp.addClass("btn-err");
-            } else if (btn.type === "warn") {
-                tmp.addClass("btn-warn");
-            } else if (btn.type === "info") {
-                tmp.addClass("btn-info");
+
+        if (!options.content) {
+            options.content = "";
+        }
+
+        /*
+         * Callbacks
+         */
+        var m = this;
+        var closeModalFunction = function () {
+            m.close();
+        };
+
+        if (!(options.overlayClosureCallback && typeof options.overlayClosureCallback === "function")) {
+            options.overlayClosureCallback = closeModalFunction;
+        }
+
+        if (!(options.modalClosureCallback && typeof options.modalClosureCallback === "function")) {
+            options.modalClosureCallback = closeModalFunction;
+        }
+
+        this.id = Praw.getUniqId();
+
+        var modal = $('<div>').addClass("modal-content").css('min-width', "600px");
+        if (options.modalClass) {
+            modal.addClass(options.modalClass);
+        }
+        var tmp = $('<h6>').text(options.title).addClass("d-inline");
+        if (options.titleClass) {
+            tmp.addClass(options.titleClass);
+        }
+        modal.append($('<div>').addClass("modal-header").append(tmp).append($('<div>').addClass("u-pull-right").append($('<span>').addClass("icon-x font-size-x15 cursor-pointer").on('click', options.modalClosureCallback))));
+        modal.append($('<div>').addClass("modal-body").append(options.content));
+
+        var buttons = [];
+        $.each(options.buttons, function (i, btn) {
+            var tmp = $('<button>').addClass("btn-small");
+            if (btn.name) {
+                tmp.text(btn.name);
             }
+            if (btn.type) {
+                if (btn.type === "conf") {
+                    tmp.addClass("btn-conf");
+                } else if (btn.type === "err") {
+                    tmp.addClass("btn-err");
+                } else if (btn.type === "warn") {
+                    tmp.addClass("btn-warn");
+                } else if (btn.type === "info") {
+                    tmp.addClass("btn-info");
+                }
+            }
+            if (btn.onClick && typeof btn.onClick === "function") {
+                tmp.on('click', btn.onClick);
+            } else {
+                tmp.on('click', closeModalFunction);
+            }
+            buttons.push(tmp);
+        });
+        if (buttons.length === 0) {
+            buttons.push($('<button>').addClass("btn-small").text("Close").on('click', closeModalFunction));
         }
-        if (btn.onClick && typeof btn.onClick === "function") {
-            tmp.on('click', btn.onClick);
+        modal.append($('<div>').addClass("modal-footer text-right").append(buttons));
+
+        modal = $('<div>').addClass("modal").attr('data-prawmodal', this.id).append(modal).append($('<div>').addClass("modal-overlay modal-close-btn").on('click', options.overlayClosureCallback));
+
+        if (options.animation) {
+            modal.addClass("modal-animated-" + options.animation);
         } else {
-            tmp.on('click', closeModalFunction);
+            modal.addClass("modal-animated-dropdown");
         }
-        buttons.push(tmp);
-    });
-    if (buttons.length === 0) {
-        buttons.push($('<button>').addClass("btn-small").text("Close").on('click', closeModalFunction));
-    }
-    modal.append($('<div>').addClass("modal-footer text-right").append(buttons));
 
-    modal = $('<div>').addClass("modal").attr('data-prawmodal', id).append(modal).append($('<div>').addClass("modal-overlay modal-close-btn").on('click', options.overlayClosureCallback));
-
-    if (options.animation) {
-        modal.addClass("modal-animated-" + options.animation);
-    } else {
-        modal.addClass("modal-animated-dropdown");
+        $('body').append(modal);
     }
 
-    if (options.size) {
-        modal.addClass("modal-" + options.size);
+    close() {
+        $('[data-prawmodal="' + this.id + '"]').remove();
     }
-
-    $('body').append(modal);
-
-    return id;
-};
-
-Praw.modal.close = function (id) {
-    if (id) {
-        // ok
-    } else if (Praw.modal.lastId) {
-        id = Praw.modal.lastId;
-        delete Praw.modal.lastId;
-    } else {
-        return;
-    }
-
-    $('[data-prawmodal="' + id + '"]').remove();
 };
