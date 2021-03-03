@@ -177,6 +177,9 @@ Praw.modal = class {
             } else {
                 tmp.on('click', closeModalFunction);
             }
+            if (i > 0) {
+                tmp.addClass("margin-left-x05")
+            }
             buttons.push(tmp);
         });
         if (buttons.length === 0) {
